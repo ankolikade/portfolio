@@ -8,14 +8,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #1e1520;
-    --cream: #fdf0f5;
-    --warm: #f0d6e4;
-    --rust: #c0396e;
+    --ink: #1a1f2e;
+    --cream: #fff0f6;
+    --warm: #fad4e8;
+    --pink: #e8457a;
+    --pink-light: #f7b8d0;
+    --pink-pale: #fde8f2;
+    --teal: #0e7c7b;
+    --teal-dark: #095f5e;
+    --teal-light: #b2e0df;
+    --teal-pale: #e6f7f7;
+    --peacock: #1a9e9c;
     --gold: #d4638a;
-    --muted: #7a5a6a;
+    --muted: #6b4d6e;
     --light-muted: #c4a0b4;
-    --paper: #fdf6f9;
+    --paper: #fff7fb;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -24,7 +31,7 @@
 
   body {
     font-family: 'DM Sans', sans-serif;
-    background: var(--paper);
+    background: #ffffff;
     color: var(--ink);
     overflow-x: hidden;
   }
@@ -51,9 +58,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 4rem;
-    background: rgba(250,247,242,0.9);
+    background: #fff0f6;
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--warm);
+    border-bottom: 2px solid var(--pink-light);
   }
 
   .nav-logo {
@@ -61,7 +68,7 @@
     font-size: 1.1rem;
     font-weight: 400;
     letter-spacing: 0.08em;
-    color: var(--ink);
+    color: var(--pink);
     text-decoration: none;
   }
 
@@ -82,13 +89,19 @@
     transition: color 0.2s;
   }
 
-  .nav-links a:hover { color: var(--rust); }
+  .nav-links a:hover { color: var(--teal); }
+
+  .nav-links a.active {
+    color: var(--pink);
+    border-bottom: 2px solid var(--pink);
+    padding-bottom: 2px;
+  }
 
   /* ─── HERO ─── */
   .hero {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 420px 1fr;
     padding-top: 80px;
     position: relative;
     overflow: hidden;
@@ -97,10 +110,118 @@
   .hero-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 6rem 4rem 6rem 6rem;
+    align-items: center;
+    padding: 4rem 2.5rem 4rem 4rem;
     position: relative;
     z-index: 2;
+    border-right: 2px solid var(--pink-light);
+    background: var(--pink-pale);
+  }
+
+  .hero-photo-wrap {
+    width: 260px;
+    height: 300px;
+    overflow: hidden;
+    border: 3px solid var(--pink);
+    box-shadow: 6px 6px 0px var(--teal-light), 10px 10px 0px var(--pink-light);
+    margin-bottom: 2rem;
+    flex-shrink: 0;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .hero-name-block {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--pink);
+  }
+
+  .hero-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-affil {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-social-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-chip {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal);
+    border: 1.5px solid var(--teal);
+    padding: 0.3rem 0.7rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .social-chip:hover { background: var(--teal); color: white; }
+
+  .hero-job-alert {
+    background: var(--pink);
+    color: white;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-job-alert strong {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    opacity: 0.85;
+  }
+
+  /* ─── HERO RIGHT (about) ─── */
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 5rem 4rem 4rem;
+    position: relative;
+    z-index: 2;
+    background: var(--teal-pale);
   }
 
   .hero-tag {
@@ -108,8 +229,8 @@
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--rust);
-    margin-bottom: 1.5rem;
+    color: var(--pink);
+    margin-bottom: 1.2rem;
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -120,85 +241,80 @@
     display: block;
     width: 2rem;
     height: 1px;
-    background: var(--rust);
+    background: var(--pink);
   }
 
-  .hero h1 {
+  .hero-greeting {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-size: clamp(2rem, 3vw, 2.8rem);
     font-weight: 300;
-    line-height: 1.05;
+    line-height: 1.15;
+    margin-bottom: 1.75rem;
     letter-spacing: -0.01em;
-    margin-bottom: 0.2rem;
   }
 
-  .hero h1 em {
-    font-style: italic;
-    color: var(--rust);
+  .hero-greeting em { font-style: italic; color: var(--teal); }
+
+  .hero-bio {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: #3a2a34;
+    margin-bottom: 1.2rem;
+    max-width: 620px;
   }
 
-  .hero-name-row {
+  .hero-bio a {
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 1px solid var(--teal-light);
+    transition: border-color 0.2s;
+  }
+
+  .hero-bio a:hover { border-color: var(--teal); }
+
+  .hero-divider {
+    width: 3rem;
+    height: 2px;
+    background: var(--pink);
+    margin: 1.5rem 0;
+  }
+
+  .hero-highlights {
     display: flex;
-    align-items: center;
-    gap: 1.75rem;
-    margin-bottom: 0.2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
   }
 
-  .hero-photo-wrap {
-    flex-shrink: 0;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid var(--rust);
-    box-shadow: 0 0 0 6px var(--warm);
-  }
-
-  .hero-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-  }
-
-  .hero-subtitle {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--muted);
-    margin: 1.5rem 0 2.5rem;
-    line-height: 1.6;
-    max-width: 420px;
-  }
-
-  .hero-meta {
+  .highlight-item {
     display: flex;
-    flex-direction: column;
+    align-items: baseline;
     gap: 0.5rem;
-    margin-bottom: 3rem;
   }
 
-  .hero-meta-item {
+  .highlight-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--teal);
+    line-height: 1;
+  }
+
+  .highlight-item:nth-child(odd) .highlight-num { color: var(--pink); }
+  .highlight-item:nth-child(even) .highlight-num { color: var(--teal); }
+
+  .highlight-label {
     font-family: 'DM Mono', monospace;
-    font-size: 0.72rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--muted);
-    letter-spacing: 0.04em;
-  }
-
-  .hero-meta-item span {
-    color: var(--ink);
-    font-weight: 500;
-  }
-
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+    max-width: 80px;
+    line-height: 1.4;
   }
 
   .btn-primary {
-    background: var(--rust);
+    background: var(--pink);
     color: white;
     padding: 0.85rem 2rem;
     font-family: 'DM Mono', monospace;
@@ -210,7 +326,7 @@
     display: inline-block;
   }
 
-  .btn-primary:hover { background: var(--ink); transform: translateY(-1px); }
+  .btn-primary:hover { background: var(--teal); transform: translateY(-1px); }
 
   .btn-secondary {
     font-family: 'DM Mono', monospace;
@@ -224,7 +340,7 @@
     transition: color 0.2s, border-color 0.2s;
   }
 
-  .btn-secondary:hover { color: var(--rust); border-color: var(--rust); }
+  .btn-secondary:hover { color: var(--pink); border-color: var(--pink); }
 
   .scholar-btn {
     font-family: 'DM Mono', monospace;
@@ -232,7 +348,7 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: white;
-    background: var(--rust);
+    background: var(--pink);
     padding: 0.6rem 1.2rem;
     text-decoration: none;
     white-space: nowrap;
@@ -240,7 +356,7 @@
     display: inline-block;
   }
 
-  .scholar-btn:hover { background: var(--ink); transform: translateY(-1px); }
+  .scholar-btn:hover { background: var(--teal); transform: translateY(-1px); }
 
   .hero-right {
     position: relative;
@@ -290,7 +406,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 3rem;
     font-weight: 300;
-    color: var(--rust);
+    color: var(--pink);
     line-height: 1;
     margin-bottom: 0.4rem;
   }
@@ -343,7 +459,7 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.2em;
-    color: var(--rust);
+    color: var(--pink);
     opacity: 0.7;
   }
 
@@ -356,38 +472,38 @@
 
   .section-line {
     flex: 1;
-    height: 1px;
-    background: var(--warm);
+    height: 2px;
+    background: var(--pink-light);
     margin-left: auto;
   }
 
   /* ─── RESEARCH INTERESTS ─── */
   .interests {
-    background: #2a1028;
+    background: #0e7c7b;
     color: var(--cream);
     padding: 5rem 6rem;
   }
 
-  .interests .section-title { color: var(--cream); }
-  .interests .section-num { color: var(--gold); }
-  .interests .section-line { background: rgba(255,255,255,0.1); }
+  .interests .section-title { color: #fff; }
+  .interests .section-num { color: var(--pink-light); }
+  .interests .section-line { background: rgba(255,255,255,0.15); }
 
   .interest-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5px;
-    background: rgba(255,255,255,0.08);
-    border: 1.5px solid rgba(255,255,255,0.08);
+    gap: 2px;
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.1);
   }
 
   .interest-item {
-    background: #2a1028;
+    background: #0b6b6a;
     padding: 2rem 1.5rem;
     transition: background 0.2s;
     cursor: default;
   }
 
-  .interest-item:hover { background: #3a1838; }
+  .interest-item:hover { background: rgba(255, 255, 255, 0.12); }
 
   .interest-icon {
     font-size: 1.4rem;
@@ -404,6 +520,10 @@
   }
 
   /* ─── PUBLICATIONS ─── */
+  #publications {
+    background: #ffffff;
+  }
+
   .pub-list { display: flex; flex-direction: column; gap: 0; }
 
   .pub-item {
@@ -444,13 +564,13 @@
     line-height: 1.5;
   }
 
-  .pub-authors strong { color: var(--rust); font-weight: 500; }
+  .pub-authors strong { color: var(--pink); font-weight: 500; }
 
   .pub-venue {
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.06em;
-    color: var(--light-muted);
+    color: var(--teal);
     text-transform: uppercase;
   }
 
@@ -459,7 +579,7 @@
     font-size: 0.58rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    background: var(--rust);
+    background: var(--pink);
     color: white;
     padding: 0.25rem 0.6rem;
     white-space: nowrap;
@@ -468,8 +588,8 @@
   }
 
   .pub-badge.gold {
-    background: var(--gold);
-    color: var(--ink);
+    background: var(--teal);
+    color: white;
   }
 
   /* ─── EDUCATION & AWARDS ─── */
@@ -486,13 +606,13 @@
     transition: border-color 0.2s, transform 0.2s;
   }
 
-  .edu-item:hover { border-color: var(--rust); transform: translateY(-2px); }
+  .edu-item:hover { border-color: var(--teal); transform: translateY(-2px); }
 
   .edu-year {
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.15em;
-    color: var(--rust);
+    color: var(--teal);
     margin-bottom: 1rem;
     text-transform: uppercase;
   }
@@ -516,13 +636,13 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.62rem;
     letter-spacing: 0.06em;
-    color: var(--gold);
+    color: var(--teal);
     text-transform: uppercase;
   }
 
   /* ─── AWARDS ─── */
   .awards-section {
-    background: var(--cream);
+    background: var(--pink-pale);
   }
 
   .award-list { display: flex; flex-direction: column; gap: 0; }
@@ -544,10 +664,12 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.1em;
-    color: var(--rust);
+    color: var(--teal);
     padding-top: 0.25rem;
     text-transform: uppercase;
   }
+
+  .award-item:nth-child(even) .award-year { color: var(--pink); }
 
   .award-name {
     font-family: 'Cormorant Garamond', serif;
@@ -565,7 +687,7 @@
 
   /* ─── CONTACT ─── */
   .contact {
-    background: #2a1028;
+    background: #0e7c7b;
     color: var(--cream);
     padding: 6rem;
     display: grid;
@@ -582,7 +704,7 @@
     line-height: 1.1;
     margin-bottom: 1.5rem;
   }
-  .contact-heading em { font-style: italic; color: var(--gold); }
+  .contact-heading em { font-style: italic; color: var(--pink-light); }
 
   .contact-body {
     font-size: 0.9rem;
@@ -613,7 +735,7 @@
     font-size: 0.65rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--pink-light);
     width: 5rem;
   }
 
@@ -641,7 +763,7 @@
     font-size: 0.6rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--pink-light);
     margin-bottom: 0.6rem;
   }
 
@@ -655,7 +777,7 @@
 
   /* ─── FOOTER ─── */
   footer {
-    background: #2a1028;
+    background: #0b6b6a;
     padding: 1.5rem 6rem;
     border-top: 1px solid rgba(255,255,255,0.06);
     display: flex;
@@ -698,9 +820,9 @@
     .nav-links { display: none; }
 
     .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 5rem 2rem 2rem; }
-    .hero-right { padding: 2rem; }
-    .hero-bg-text { display: none; }
+    .hero-left { padding: 5rem 2rem 2rem; border-right: none; border-bottom: 1px solid var(--warm); }
+    .hero-right { padding: 2.5rem 2rem; }
+    .hero-photo-wrap { width: 180px; height: 210px; }
 
     section { padding: 4rem 2rem; }
     .interests { padding: 4rem 2rem; }
@@ -711,6 +833,7 @@
     .edu-grid { grid-template-columns: 1fr; }
     .pub-item { grid-template-columns: 2.5rem 1fr; }
     .pub-badge { display: none; }
+    .hero-highlights { gap: 1.25rem; }
   }
 </style>
 </head>
@@ -720,6 +843,7 @@
 <nav>
   <a class="nav-logo" href="#">Ankolika De</a>
   <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#education">Education</a></li>
@@ -728,54 +852,60 @@
   </ul>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
+<!-- HERO / ABOUT -->
+<section class="hero" id="home">
+  <!-- LEFT: Photo + identity -->
   <div class="hero-left">
-    <div class="hero-tag">Ph.D. Candidate · Penn State University</div>
-    <div class="hero-name-row">
-      <div class="hero-photo-wrap">
-        <img src="ankolika.jpg" alt="Ankolika De" class="hero-photo" />
-      </div>
+    <div class="hero-photo-wrap">
+      <img src="ankolika.jpg" alt="Ankolika De" class="hero-photo" />
+    </div>
+    <div class="hero-name-block">
       <h1>Ankolika <em>De</em></h1>
+      <div class="hero-role">Ph.D. Candidate</div>
+      <div class="hero-affil">Penn State University<br>College of Information Sciences & Technology</div>
     </div>
-    <p class="hero-subtitle">Studying how people navigate—and resist—rapid technological change.</p>
-    <div class="hero-meta">
-      <div class="hero-meta-item">Dept. of <span>Human-Centered Computing & Social Informatics</span></div>
-      <div class="hero-meta-item">College of <span>Information Sciences & Technology</span></div>
-      <div class="hero-meta-item">Advisor: <span>Dr. Kelley Cotter</span></div>
+    <div class="hero-social-links">
+      <a href="mailto:apd5873@psu.edu" class="social-chip">Email</a>
+      <a href="https://scholar.google.com/citations?user=ankolikade" target="_blank" class="social-chip">Scholar</a>
+      <a href="https://www.linkedin.com/in/ankolikade" target="_blank" class="social-chip">LinkedIn</a>
     </div>
-    <div class="hero-cta">
-      <a href="#publications" class="btn-primary">View Research</a>
-      <a href="#contact" class="btn-secondary">Get in touch →</a>
+    <div class="hero-job-alert">
+      <strong>🎓 On the Job Market</strong>
+      Seeking academic positions (postdocs & tenure-track) starting September 2025 in CS, Information Sciences, Design, Communication & Media Studies.
     </div>
   </div>
 
+  <!-- RIGHT: About me bio -->
   <div class="hero-right">
-    <div class="hero-bg-text">AI</div>
-    <div>
-      <div class="hero-stats">
-        <div class="stat-box">
-          <div class="stat-num">17</div>
-          <div class="stat-label">Peer-Reviewed<br>Publications</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">8+</div>
-          <div class="stat-label">Awards &<br>Fellowships</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">CHI</div>
-          <div class="stat-label">Top Venue<br>Multiple Years</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">4</div>
-          <div class="stat-label">Years of<br>PhD Research</div>
-        </div>
+    <div class="hero-tag">About Me</div>
+    <h2 class="hero-greeting">Hello! I'm <em>Ankolika</em>,<br>an interdisciplinary researcher.</h2>
+
+    <p class="hero-bio">I am a fourth-year PhD candidate in the <strong>College of Information Sciences and Technology at Penn State</strong>, advised by <a href="#">Dr. Kelley Cotter</a>. I study how people engage with and adapt to platform technologies — including AI systems and social media — and analyze how technological change is framed in corporate and public discourse.</p>
+
+    <p class="hero-bio">I collaborate with communities to design more inclusive and accountable systems. Using methods such as interviews, focus groups, content and discourse analysis, and participatory design, I center user perspectives. My research draws from <strong>Human-Computer Interaction, Information Sciences, Media Studies, Critical Platform Studies,</strong> and Science and Technology Studies.</p>
+
+    <p class="hero-bio">I hold a B.S. in Computer Science with a minor in Psychology from <strong>City University of Hong Kong</strong>, where I graduated with First Class Honours. My work has been published at CHI, CSCW, ICA, FAccT, AIES, and in journals including <em>New Media & Society</em>, <em>Platforms & Society</em>, and <em>Convergence</em>.</p>
+
+    <p class="hero-bio">Outside of research, I'm an avid <strong>Bharatanatyam dancer</strong> and was part of Natya — Penn State's only competitive classical dance team. I enjoy reading, cooking, and travelling. Feel free to reach out at <a href="mailto:apd5873@psu.edu">apd5873@psu.edu</a>!</p>
+
+    <div class="hero-divider"></div>
+
+    <div class="hero-highlights">
+      <div class="highlight-item">
+        <div class="highlight-num">17</div>
+        <div class="highlight-label">Peer-reviewed publications</div>
       </div>
-      <div class="hero-awards" style="position:relative;bottom:auto;left:auto;right:auto;margin-top:1.5rem;">
-        <div class="award-pill">★ Best Paper ICA 2023</div>
-        <div class="award-pill">★ Alumni Fellowship 2025</div>
-        <div class="award-pill">★ Columbia Fellow 2024</div>
-        <div class="award-pill">★ Best Doctoral Presentation</div>
+      <div class="highlight-item">
+        <div class="highlight-num">8+</div>
+        <div class="highlight-label">Awards & fellowships</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-num">4</div>
+        <div class="highlight-label">Years PhD research</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-num">CHI</div>
+        <div class="highlight-label">Top venue, multiple years</div>
       </div>
     </div>
   </div>
@@ -917,7 +1047,7 @@
 </section>
 
 <!-- EDUCATION -->
-<section id="education" style="background:var(--cream)">
+<section id="education" style="background: var(--teal-pale)">
   <div class="section-header reveal">
     <div class="section-num">03</div>
     <h2 class="section-title">Education</h2>
@@ -1015,9 +1145,9 @@
     <h2 class="contact-heading">Let's<br><em>Connect</em></h2>
     <p class="contact-body">Interested in collaboration, speaking opportunities, or just want to talk about participatory AI, platform governance, or critical HCI? Reach out.</p>
     <div class="contact-links">
-      <a href="mailto:apd5873@psu.edu" class="contact-link-item">
+      <a href="/cdn-cgi/l/email-protection#6908190d5c515e5a29191a1c470c0d1c" class="contact-link-item">
         <div class="contact-link-label">Email</div>
-        <div class="contact-link-value">apd5873@psu.edu</div>
+        <div class="contact-link-value"><span class="__cf_email__" data-cfemail="d1b0a1b5e4e9e6e291a1a2a4ffb4b5a4">[email&#160;protected]</span></div>
       </a>
       <a href="https://sites.psu.edu/ankolikade" target="_blank" class="contact-link-item">
         <div class="contact-link-label">Website</div>
@@ -1055,21 +1185,39 @@
   <div class="footer-text">Human-Centered Computing & Social Informatics</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        const siblings = Array.from(entry.target.parentNode.children);
+        const index = siblings.indexOf(entry.target) % 5;
         setTimeout(() => {
           entry.target.classList.add('visible');
-        }, 60 * (Array.from(entry.target.parentNode.children).indexOf(entry.target) % 6));
+        }, index * 80);
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
+  }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
   reveals.forEach(el => observer.observe(el));
+  setTimeout(() => { reveals.forEach(el => el.classList.add('visible')); }, 1500);
+
+  // Active nav highlight based on scroll position
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(sec => sectionObserver.observe(sec));
 </script>
 </body>
 </html>
