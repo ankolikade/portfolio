@@ -592,94 +592,23 @@
     line-height: 1.6;
   }
 
-  /* ─── CONTACT ─── */
-  .contact {
-    background: var(--pink);
-    color: var(--white);
-    padding: 6rem 5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-  }
+  /* ─── RESEARCH AGENDA ─── */
+  .research-agenda-section { background: var(--off-white); }
 
-  .contact-heading {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 1.25rem;
-    color: var(--white);
-  }
-
-  .contact-heading em { font-style: italic; color: var(--black); }
-
-  .contact-body {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.8);
-    line-height: 1.7;
-    margin-bottom: 2rem;
-  }
-
-  .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
-
-  .contact-link-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
-    background: rgba(255,255,255,0.12);
-    border-radius: 16px;
-    text-decoration: none;
-    color: var(--white);
-    transition: all 0.2s;
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .contact-link-item:hover { background: var(--black); border-color: var(--black); }
-
-  .contact-link-label {
-    font-size: 0.62rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
-    width: 5rem;
-  }
-
-  .contact-link-value {
-    font-size: 0.87rem;
-    color: var(--white);
-    font-weight: 500;
-  }
-
-  .contact-right { display: flex; flex-direction: column; gap: 1.25rem; }
-
-  .affiliation-card {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.15);
-    padding: 1.75rem;
+  .agenda-placeholder {
+    padding: 3rem;
+    background: var(--white);
+    border: 1px dashed var(--pink-mid);
     border-radius: 20px;
-    transition: all 0.2s;
+    text-align: center;
   }
 
-  .affiliation-card:hover { background: var(--black); border-color: var(--black); }
-
-  .aff-label {
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
-    margin-bottom: 0.6rem;
-  }
-
-  .aff-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
-    font-weight: 300;
-    color: var(--white);
-    line-height: 1.5;
+  .agenda-placeholder p {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 560px;
+    margin: 0 auto;
   }
 
   /* ─── FOOTER ─── */
@@ -716,7 +645,6 @@
     .hero-right { padding: 2.5rem 2rem; }
     section { padding: 4rem 2rem; }
     .interests { padding: 4rem 2rem; }
-    .contact { padding: 4rem 2rem; grid-template-columns: 1fr; gap: 3rem; }
     footer { padding: 1.5rem 2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
     .interest-grid { grid-template-columns: repeat(2, 1fr); }
     .edu-grid { grid-template-columns: 1fr; }
@@ -732,11 +660,10 @@
   <a class="nav-logo" href="#">Ankolika <span>De</span></a>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
-    <li><a href="#research">Research</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#awards">Awards</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#research-agenda">Research Agenda</a></li>
   </ul>
 </nav>
 
@@ -749,19 +676,14 @@
     </div>
     <div class="hero-name-block">
       <h1>Ankolika <em>De</em></h1>
-      <div class="hero-role">Ph.D. Candidate</div>
+      <div class="hero-role">Inaugural Postdoctoral Fellow</div>
       <div class="hero-affil">
-        Penn State University<br>College of Information Sciences & Technology
+        Vanderbilt University<br>College of Connected Computing<br>Computing + Society
       </div>
     </div>
     <div class="hero-social-links">
-      <a href="mailto:apd5873@psu.edu" class="social-chip">Email</a>
       <a href="https://scholar.google.com/citations?user=ankolikade" target="_blank" class="social-chip">Scholar</a>
       <a href="https://www.linkedin.com/in/ankolikade" target="_blank" class="social-chip">LinkedIn</a>
-    </div>
-    <div class="hero-job-alert">
-      <strong>On the Job Market</strong>
-      Seeking academic positions (postdocs & tenure-track) starting September 2025 in CS, Information Sciences, Design, Communication & Media Studies.
     </div>
   </div>
 
@@ -770,65 +692,21 @@
     <div class="hero-tag">About Me</div>
     <h2 class="hero-greeting">Hello! I'm <em>Ankolika</em>,<br>an interdisciplinary researcher.</h2>
 
-    <p class="hero-bio">I am a fourth-year PhD candidate in the <strong>College of Information Sciences and Technology at Penn State</strong>, advised by <a href="#">Dr. Kelley Cotter</a>. I study how people engage with and adapt to platform technologies — including AI systems and social media — and analyze how technological change is framed in corporate and public discourse.</p>
+    <p class="hero-bio">I am the inaugural <strong>Postdoctoral Fellow at Vanderbilt University's College of Connected Computing</strong>, in the Computing + Society program. I study how people engage with and adapt to platform technologies — including AI systems and social media — and analyze how technological change is framed in corporate and public discourse.</p>
 
     <p class="hero-bio">I collaborate with communities to design more inclusive and accountable systems. Using methods such as interviews, focus groups, content and discourse analysis, and participatory design, I center user perspectives. My research draws from <strong>Human-Computer Interaction, Information Sciences, Media Studies, Critical Platform Studies,</strong> and Science and Technology Studies.</p>
 
-    <p class="hero-bio">I hold a B.S. in Computer Science with a minor in Psychology from <strong>City University of Hong Kong</strong>, where I graduated with First Class Honours. My work has been published at CHI, CSCW, ICA, FAccT, AIES, and in journals including <em>New Media & Society</em>, <em>Platforms & Society</em>, and <em>Convergence</em>.</p>
+    <p class="hero-bio">I hold a Ph.D. in Informatics from <strong>Pennsylvania State University</strong> and a B.S. in Computer Science with a minor in Psychology from <strong>City University of Hong Kong</strong>, where I graduated with First Class Honours. My work has been published at CHI, CSCW, ICA, FAccT, AIES, and in journals including <em>New Media & Society</em>, <em>Platforms & Society</em>, and <em>Convergence</em>.</p>
 
-    <p class="hero-bio">Outside of research, I'm an avid <strong>Bharatanatyam dancer</strong> and was part of Natya — Penn State's only competitive classical dance team. I enjoy reading, cooking, and travelling. Feel free to reach out at <a href="/cdn-cgi/l/email-protection#debfaebaebe6e9ed9eaeadabf0bbbaab"><span class="__cf_email__" data-cfemail="1978697d2c212e2a59696a6c377c7d6c">[email&#160;protected]</span></a>!</p>
+    <p class="hero-bio">Outside of research, I'm an avid <strong>Bharatanatyam dancer</strong> and was part of Natya — Penn State's only competitive classical dance team. I enjoy reading, cooking, and travelling.</p>
 
-  </div>
-</section>
-
-<!-- RESEARCH INTERESTS -->
-<section class="interests" id="research">
-  <div class="section-header">
-    <div class="section-num">01</div>
-    <h2 class="section-title" style="color:var(--cream)">Research Interests</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="interest-grid">
-    <div class="interest-item">
-      <span class="interest-icon">⚙️</span>
-      <div class="interest-name">Participatory AI</div>
-    </div>
-    <div class="interest-item">
-      <span class="interest-icon">📜</span>
-      <div class="interest-name">AI Governance</div>
-    </div>
-    <div class="interest-item">
-      <span class="interest-icon">🔬</span>
-      <div class="interest-name">Critical AI Design</div>
-    </div>
-    <div class="interest-item">
-      <span class="interest-icon">🛡️</span>
-      <div class="interest-name">AI Safety & Trust</div>
-    </div>
-    <div class="interest-item">
-      <span class="interest-icon">📱</span>
-      <div class="interest-name">Social Media & Information</div>
-    </div>
-    <div class="interest-item">
-      <span class="interest-icon">🎙️</span>
-      <div class="interest-name">Critical Media Studies</div>
-    </div>
-    <div class="interest-item">
-      <span class="interest-icon">🧬</span>
-      <div class="interest-name">Lived Experience Research</div>
-    </div>
-    <div class="interest-item">
-      <span class="interest-icon">👤</span>
-      <div class="interest-name">Human-Centered AI</div>
-    </div>
   </div>
 </section>
 
 <!-- PUBLICATIONS -->
 <section id="publications">
   <div class="section-header">
-    <div class="section-num">02</div>
+    <div class="section-num">01</div>
     <h2 class="section-title">Selected Publications</h2>
     <div class="section-line"></div>
     <a href="https://scholar.google.com/citations?user=ankolikade" target="_blank" class="scholar-btn">View All on Google Scholar →</a>
@@ -919,7 +797,7 @@
 <!-- EDUCATION -->
 <section id="education" style="background: var(--off-white)">
   <div class="section-header">
-    <div class="section-num">03</div>
+    <div class="section-num">02</div>
     <h2 class="section-title">Education</h2>
     <div class="section-line"></div>
   </div>
@@ -944,7 +822,7 @@
 <!-- AWARDS -->
 <section class="awards-section" id="awards">
   <div class="section-header">
-    <div class="section-num">04</div>
+    <div class="section-num">03</div>
     <h2 class="section-title">Honors & Awards</h2>
     <div class="section-line"></div>
   </div>
@@ -1009,49 +887,24 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<div class="contact" id="contact">
-  <div class="contact-left">
-    <h2 class="contact-heading">Let's<br><em>Connect</em></h2>
-    <p class="contact-body">Interested in collaboration, speaking opportunities, or just want to talk about participatory AI, platform governance, or critical HCI? Reach out.</p>
-    <div class="contact-links">
-      <a href="/cdn-cgi/l/email-protection#3859485c0d000f0b78484b4d165d5c4d" class="contact-link-item">
-        <div class="contact-link-label">Email</div>
-        <div class="contact-link-value"><span class="__cf_email__" data-cfemail="badbcade8f828d89facac9cf94dfdecf">[email&#160;protected]</span></div>
-      </a>
-      <a href="#" class="contact-link-item">
-        <div class="contact-link-label">Writing</div>
-        <div class="contact-link-value">@ankolikawrites</div>
-      </a>
-      <a href="https://www.linkedin.com/in/ankolikade" target="_blank" class="contact-link-item">
-        <div class="contact-link-label">LinkedIn</div>
-        <div class="contact-link-value">Ankolika De</div>
-      </a>
-    </div>
+<!-- RESEARCH AGENDA -->
+<section class="research-agenda-section" id="research-agenda">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <h2 class="section-title">Research Agenda</h2>
+    <div class="section-line"></div>
   </div>
 
-  <div class="contact-right">
-    <div class="affiliation-card">
-      <div class="aff-label">Primary Affiliation</div>
-      <div class="aff-name">Pennsylvania State University<br>College of Information Sciences & Technology<br>Dept. of Human-Centered Computing & Social Informatics</div>
-    </div>
-    <div class="affiliation-card">
-      <div class="aff-label">Summer Research 2025</div>
-      <div class="aff-name">Max Planck Institute for Security and Privacy<br>Human-Centered Security and Privacy Group<br>with Dr. Yixin Zou</div>
-    </div>
-    <div class="affiliation-card">
-      <div class="aff-label">Fellow</div>
-      <div class="aff-name">Logic(s) — Columbia University<br>Liberatory Tech Fellowship 2024</div>
-    </div>
+  <div class="agenda-placeholder">
+    <p>Content for this section is coming soon.</p>
   </div>
-</div>
+</section>
 
 <footer>
-  <div class="footer-text">© 2026 Ankolika De · Pennsylvania State University</div>
-  <div class="footer-text">Human-Centered Computing & Social Informatics</div>
+  <div class="footer-text">© 2026 Ankolika De · Vanderbilt University</div>
+  <div class="footer-text">College of Connected Computing · Computing + Society</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
   // Active nav highlight based on scroll position
   const sections = document.querySelectorAll('section[id], div[id]');
