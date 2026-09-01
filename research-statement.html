@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Statement — Ankolika De</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #111111;
+    --black-soft: #1e1e1e;
+    --black-card: #222222;
+    --pink: #f0427a;
+    --pink-light: #f9a8c4;
+    --pink-pale: #fff0f5;
+    --pink-mid: #fcd6e6;
+    --white: #ffffff;
+    --off-white: #fafafa;
+    --muted: #777777;
+    --light-muted: #bbbbbb;
+    --border: #eeeeee;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--black);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--black);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-logo span { color: var(--pink); }
+
+  .nav-back {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+
+  .nav-back:hover { color: var(--pink); border-color: var(--pink); background: var(--pink-pale); }
+
+  /* ─── HEADER ─── */
+  .statement-hero {
+    padding: 9rem 5rem 4rem;
+    background: var(--black);
+    position: relative;
+  }
+
+  .hero-tag {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--pink-light);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background: var(--pink);
+    border-radius: 2px;
+  }
+
+  .statement-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--white);
+    max-width: 780px;
+  }
+
+  .statement-hero h1 em { font-style: italic; color: var(--pink); }
+
+  .statement-sub {
+    font-size: 0.85rem;
+    color: var(--light-muted);
+    margin-top: 1.25rem;
+    max-width: 620px;
+    line-height: 1.7;
+  }
+
+  /* ─── CONTENT ─── */
+  .statement-body {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 5rem 2rem 6rem;
+  }
+
+  .statement-lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.65;
+    color: var(--black);
+    margin-bottom: 3.5rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--pink);
+  }
+
+  .statement-section { margin-bottom: 3.5rem; }
+
+  .statement-section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+
+  .statement-section-title::before {
+    content: '';
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--pink);
+    flex-shrink: 0;
+    transform: translateY(-2px);
+  }
+
+  .statement-section p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: #333;
+    margin-bottom: 1.25rem;
+  }
+
+  .statement-section p:last-child { margin-bottom: 0; }
+
+  .term-highlight {
+    background: var(--pink-pale);
+    color: var(--pink);
+    font-weight: 600;
+    padding: 0.05rem 0.4rem;
+    border-radius: 5px;
+  }
+
+  .agenda-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem 2.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .agenda-block + .agenda-block { margin-top: 1.25rem; }
+
+  .agenda-block-num {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--pink);
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .agenda-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+    color: var(--black);
+  }
+
+  .agenda-block p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 0;
+  }
+
+  .statement-divider {
+    width: 3rem;
+    height: 3px;
+    background: var(--pink);
+    border-radius: 4px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .statement-cta {
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .btn-primary {
+    background: var(--pink);
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--black); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(240,66,122,0.3); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--black);
+    padding: 1.5rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-text {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.25);
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .statement-hero { padding: 8rem 1.75rem 3rem; }
+    .statement-body { padding: 3.5rem 1.5rem 4rem; }
+    footer { padding: 1.5rem 1.75rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">Ankolika <span>De</span></a>
+  <a class="nav-back" href="index.html#research-agenda">← Back to Research Agenda</a>
+</nav>
+
+<!-- HEADER -->
+<section class="statement-hero">
+  <div class="hero-tag">Research Statement</div>
+  <h1>How power is produced, stabilized, and <em>reconfigured</em> in sociotechnical systems.</h1>
+  <p class="statement-sub">A fuller account of my research program — how communities appropriate platform technologies, how institutions construct discourse around technological change, and how computing research's own epistemic conditions shape whose knowledge counts.</p>
+</section>
+
+<!-- BODY -->
+<div class="statement-body">
+
+  <p class="statement-lead">I study what computing technologies make possible, for whom, and at whose expense — examining how communities appropriate platforms for uses they were never designed for, how institutions deploy discourse to naturalize particular technological trajectories, and how computing research's own epistemic conditions reproduce exclusion even while claiming to address it.</p>
+
+  <div class="statement-section">
+    <div class="statement-section-title">Appropriation, Infrastructuring, and Design</div>
+    <p>My research investigates how users appropriate digital platforms, particularly highlighting the labour-intensive nature of this process. <span class="term-highlight">Appropriation</span> is the situated, ongoing process by which users repurpose technologies within their contexts to make them their own, closely tied to <span class="term-highlight">infrastructuring</span> — the intentional work of building and maintaining systems through appropriation. I have traced these practices across a range of contexts: poets appropriating Instagram's visual format to publish text, activists adapting Instagram under algorithmic change, small businesses using WhatsApp for commerce, fat liberationists using social media as information-seeking hubs, and users' engagement with spiritual and religious content online.</p>
+    <p>This work is among the first to empirically show that as platforms grow more complex, they embed colonial undertones of standardization that privilege Eurocentric notions of innovation — a process I term <span class="term-highlight">coercive professionalization</span>, where dominant ideas about "effective" or "professional" platform use can be detrimental to existing forms of appropriation. My findings build a case for designs that prioritize customizability, preserving local and community-specific appropriations rather than enforcing rigid, top-down updates that disrupt established workflows and social interactions. I'm extending this through a partnership with Lips.Social, an alternative social media platform, to speculate and prototype scalable platforms with community-oriented governance and decision-making structures.</p>
+  </div>
+
+  <div class="statement-section">
+    <div class="statement-section-title">Discourse and the Construction of Technological Futures</div>
+    <p>A second strand examines how institutional actors construct discursive frameworks that position technological innovation as inevitable, beneficial, or necessary — foreclosing meaningful deliberation about alternatives. This emerged from an empirical observation: the communities I studied frequently drew on corporate and media discourse to form intuitive, folk theories about the platforms they used, with real consequences for how they understood their own agency and rights within these systems.</p>
+    <p>To account for how platforms manage user interpretations of change, I developed the concept of <span class="term-highlight">changecraft</span> — a structured discursive practice that frames algorithmic and policy transformations in ways that serve institutional interests, naturalize platform authority, and circumscribe users' sense of possible response. Earlier work in this strand identified the broader ideological scaffolding of platform discourse, including utopian imaginaries and appeals to "magic" through which corporations render AI and platform technologies as inherently progressive, as well as how AI systems encode and reproduce forms of religious authority through both design and communicative strategy.</p>
+    <p>My ongoing work on generative AI safety discourse extends this analysis, examining how institutions mobilize a shifting repertoire of metaphors — existential risk, mundane utility, appeals to responsible self-regulation — to stabilize particular interpretations of AI's risks and benefits. As future work, I aim to develop discursive toolkits that render these patterns visible, enabling more critical engagement with how claims about AI safety are constructed and mobilized in practice.</p>
+  </div>
+
+  <div class="statement-section">
+    <div class="statement-section-title">Epistemologies and the Politics of Research Infrastructure</div>
+    <p>The third strand takes as its object the institutional conditions that determine what counts as legitimate knowledge in computing research. I argue that the field's gatekeeping mechanisms — IRB frameworks, recruitment norms, publication standards — are not neutral but epistemically consequential, systematically reproducing the same exclusions that critical computing scholarship seeks to address. At a moment when AI development is becoming increasingly concentrated and top-down, recovering and centering local, situated, community-held knowledge becomes an urgent critical project.</p>
+    <p>I examine how IRB structures and publication norms, designed primarily for Western academic contexts, are ill-equipped to support non-Western, community-grounded research methodologies — foreclosing the forms of knowledge most consequential for critical computing. A related line of work extends this into practice, offering frameworks for integrating lived experience into AI system design as a constitutive input rather than a post-hoc validation mechanism.</p>
+  </div>
+
+  <div class="statement-divider"></div>
+
+  <div class="statement-section">
+    <div class="statement-section-title">Future Research Agenda</div>
+    <p>My research is organized around a central question: how power is produced, stabilized, and potentially reconfigured in sociotechnical systems. I plan to pursue this through two interconnected directions.</p>
+
+    <div class="agenda-block">
+      <div class="agenda-block-num">Direction 01</div>
+      <h3>Imagining Alternative, Community-Centered Technologies</h3>
+      <p>This emerges from my ongoing collaboration with Lips.Social. Drawing on interviews and participatory workshops currently in a pilot phase, this project examines user needs and barriers within community-based governance systems, foregrounding accessibility, sustained user agency, and scalability models that privilege depth of engagement over quantitative growth metrics. The aim is transferable frameworks and theories for bottom-up, community-driven design, with implications for institutional design, policy, and collective technological stewardship.</p>
+    </div>
+
+    <div class="agenda-block">
+      <div class="agenda-block-num">Direction 02</div>
+      <h3>Discourse and Representation in Computational Systems</h3>
+      <p>This extends my discourse-analytic research on corporate and public narratives surrounding AI. Building on the fact that discourses manifest as recurring ideological frames and strategic silences, I aim to develop evidence-based governance frameworks that equip regulators, civil society actors, and industry practitioners with tools for more transparent, accountable, and inclusive AI communication — while engaging broader questions of how narratives of innovation shape regulatory design and public trust in computational systems.</p>
+    </div>
+  </div>
+
+  <div class="statement-cta">
+    <a href="index.html#publications" class="btn-primary">See Related Publications →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-text">© 2026 Ankolika De · Vanderbilt University</div>
+  <div class="footer-text">College of Connected Computing · Computing + Society</div>
+</footer>
+
+</body>
+</html>
