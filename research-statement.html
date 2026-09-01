@@ -17,7 +17,11 @@
     --border: #eeeeee;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
   body {
     font-family: 'DM Sans', sans-serif;
@@ -43,7 +47,9 @@
     text-decoration: none;
   }
 
-  .nav-logo span { color: var(--pink); }
+  .nav-logo span {
+    color: var(--pink);
+  }
 
   .nav-back {
     font-size: 0.75rem;
@@ -55,7 +61,11 @@
     border: 1px solid var(--border);
   }
 
-  .nav-back:hover { color: var(--pink); border-color: var(--pink); background: var(--pink-pale); }
+  .nav-back:hover {
+    color: var(--pink);
+    border-color: var(--pink);
+    background: var(--pink-pale);
+  }
 
   /* ─── DOCUMENT ─── */
   .doc {
@@ -90,6 +100,11 @@
     text-align: right;
   }
 
+  .letterhead-address strong {
+    color: var(--black);
+    font-weight: 600;
+  }
+
   .doc-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
@@ -116,7 +131,10 @@
     color: var(--black);
   }
 
-  .doc strong { font-weight: 600; color: var(--black); }
+  .doc strong {
+    font-weight: 600;
+    color: var(--black);
+  }
 
   .refs {
     margin-top: 2.5rem;
@@ -140,8 +158,14 @@
     text-align: left;
   }
 
-  .refs a { color: var(--pink); text-decoration: none; }
-  .refs a:hover { text-decoration: underline; }
+  .refs a {
+    color: var(--pink);
+    text-decoration: none;
+  }
+
+  .refs a:hover {
+    text-decoration: underline;
+  }
 
   .doc-cta {
     text-align: center;
@@ -163,7 +187,9 @@
     display: inline-block;
   }
 
-  .btn-primary:hover { background: var(--black); }
+  .btn-primary:hover {
+    background: var(--black);
+  }
 
   footer {
     background: var(--black);
@@ -181,14 +207,33 @@
   }
 
   @media (max-width: 700px) {
-    nav { padding: 1rem 1.5rem; }
-    .doc { padding: 2.5rem 1.25rem 4rem; }
-    .doc-letterhead { flex-direction: column; gap: 0.75rem; }
-    .letterhead-address { text-align: left; }
-    footer { padding: 1.25rem 1.5rem; flex-direction: column; gap: 0.4rem; text-align: center; }
+    nav {
+      padding: 1rem 1.5rem;
+    }
+
+    .doc {
+      padding: 2.5rem 1.25rem 4rem;
+    }
+
+    .doc-letterhead {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .letterhead-address {
+      text-align: left;
+    }
+
+    footer {
+      padding: 1.25rem 1.5rem;
+      flex-direction: column;
+      gap: 0.4rem;
+      text-align: center;
+    }
   }
 </style>
 </head>
+
 <body>
 
 <nav>
@@ -198,13 +243,19 @@
 
 <div class="doc">
 
+  <!-- LETTERHEAD -->
+  <div class="doc-letterhead">
+    <div class="letterhead-name">
+      Ankolika De
+    </div>
 
-  <div class="letterhead-address">
-    Vanderbilt University<br>
-    College of Connected Computing<br>
-    Computing + Society (C+S)<br>
-    Nashville, Tennessee 37240 &nbsp;·&nbsp; computingsociety@vanderbilt.edu
-  </div>
+    <div class="letterhead-address">
+      <strong>Vanderbilt University</strong><br>
+      College of Connected Computing<br>
+      <strong>Computing + Society (C+S)</strong><br>
+      Nashville, Tennessee 37240<br>
+      computingsociety@vanderbilt.edu
+    </div>
   </div>
 
   <div class="doc-title">Research Statement</div>
@@ -235,31 +286,56 @@
 
   <p>The second direction extends my discourse-analytic research on corporate and public narratives surrounding AI. Building on the fact that discourses manifest as recurring ideological frames and strategic silences, I aim to develop evidence-based governance frameworks that equip regulators, civil society actors, and industry practitioners with tools for more transparent, accountable, and inclusive AI communication, while also engaging broader questions of how narratives of innovation influence regulatory design and public trust in computational systems.</p>
 
+  <!-- REFERENCES -->
   <div class="refs">
     <h2>References</h2>
-    <p>De, A. (2025). "Business on WhatsApp is tough now — but am I really a businesswoman?" Exploring challenges with adapting to changes in WhatsApp Business. <em>CHI 2025.</em> <a href="https://doi.org/10.1145/3706598.3713988" target="_blank">https://doi.org/10.1145/3706598.3713988</a></p>
-    <p>De, A., & Cotter, K. (2025). Who is a good digital activist? Exploring social justice activists' adaptation to Instagram's algorithmic changes. <em>Proc. ACM Hum.-Comput. Interact.,</em> 9(7). <a href="https://doi.org/10.1145/3757440" target="_blank">https://doi.org/10.1145/3757440</a></p>
-    <p>Cotter, K., Ritchart, A., De, A., Foyle, K., Kanthawala, S., McAtee, H., & Watson, T.X. (2024). If you're reading this, it's meant for you: The reflexive ambivalence of algorithmic conspirituality. <em>Convergence,</em> 0(0).</p>
-    <p>Kanthawala, S., Cotter, K., Ritchart, A., De, A., McAtee, H., Yun, C., & DeCook, J. (2023). Algorithmic conspirituality: Explicating its emergence, dimensions, and persuasibility. <em>New Media & Society,</em> 0(0).</p>
-    <p>De, A. (2024). A situated-infrastructuring of WhatsApp for business in India. <em>CHI EA 2024.</em> <a href="https://doi.org/10.1145/3613905.3651034" target="_blank">https://doi.org/10.1145/3613905.3651034</a></p>
-    <p>De, A., & Cotter, K. (2025). A taxonomy for rapidly changing social media platforms. <em>AoIR 2025.</em></p>
-    <p>Jonas, R. M., De, A., & Cotter, K. (2024). "We happen to be different and different is not bad": Designing for intersectional fat-positive information-seeking. <em>CHI 2024.</em> <a href="https://doi.org/10.1145/3613904.3642599" target="_blank">https://doi.org/10.1145/3613904.3642599</a></p>
+
+    <p><strong>De, A.</strong> (2025). "Business on WhatsApp is tough now — but am I really a businesswoman?" Exploring challenges with adapting to changes in WhatsApp Business. <em>CHI 2025.</em> <a href="https://doi.org/10.1145/3706598.3713988" target="_blank">https://doi.org/10.1145/3706598.3713988</a></p>
+
+    <p><strong>De, A.</strong>, & Cotter, K. (2025). Who is a good digital activist? Exploring social justice activists' adaptation to Instagram's algorithmic changes. <em>Proc. ACM Hum.-Comput. Interact.,</em> 9(7). <a href="https://doi.org/10.1145/3757440" target="_blank">https://doi.org/10.1145/3757440</a></p>
+
+    <p>Cotter, K., Ritchart, A., <strong>De, A.</strong>, Foyle, K., Kanthawala, S., McAtee, H., & Watson, T.X. (2024). If you're reading this, it's meant for you: The reflexive ambivalence of algorithmic conspirituality. <em>Convergence,</em> 0(0).</p>
+
+    <p>Kanthawala, S., Cotter, K., Ritchart, A., <strong>De, A.</strong>, McAtee, H., Yun, C., & DeCook, J. (2023). Algorithmic conspirituality: Explicating its emergence, dimensions, and persuasibility. <em>New Media & Society,</em> 0(0).</p>
+
+    <p><strong>De, A.</strong> (2024). A situated-infrastructuring of WhatsApp for business in India. <em>CHI EA 2024.</em> <a href="https://doi.org/10.1145/3613905.3651034" target="_blank">https://doi.org/10.1145/3613905.3651034</a></p>
+
+    <p><strong>De, A.</strong>, & Cotter, K. (2025). A taxonomy for rapidly changing social media platforms. <em>AoIR 2025.</em></p>
+
+    <p>Jonas, R. M., <strong>De, A.</strong>, & Cotter, K. (2024). "We happen to be different and different is not bad": Designing for intersectional fat-positive information-seeking. <em>CHI 2024.</em> <a href="https://doi.org/10.1145/3613904.3642599" target="_blank">https://doi.org/10.1145/3613904.3642599</a></p>
+
     <p>Stevens, G., Pipek, V., & Wulf, V. (2009). Appropriation infrastructure: Supporting the design of usages. In V. Pipek et al. (Eds.), <em>End-User Development,</em> LNCS 5435, pp. 45–64. Springer.</p>
+
     <p>Star, S. L. (1999). The ethnography of infrastructure. <em>American Behavioral Scientist,</em> 43(3), 377–391.</p>
+
     <p>Plantin, J.-C., Lagoze, C., Edwards, P. N., & Sandvig, C. (2016). Infrastructure studies meet platform studies in the age of Google and Facebook. <em>New Media & Society,</em> 20(1), 293–310.</p>
-    <p>De, A., & Lu, Z. (2024). #Poetsofinstagram: Navigating the practices and challenges of novice poets on Instagram. <em>CHI 2024.</em> <a href="https://doi.org/10.1145/3613904.3642173" target="_blank">https://doi.org/10.1145/3613904.3642173</a></p>
-    <p>Cotter, K., Jonas, R., & De, A. (2025). "Why can't I just be fat and exist on the internet?": The embeddedness of antifatness on TikTok. <em>Platforms & Society,</em> 2. <a href="https://doi.org/10.1177/29768624251377163" target="_blank">https://doi.org/10.1177/29768624251377163</a></p>
-    <p>De, A., Cotter, K., Kanthawala, S., McAtee, H., & Ritchart, A. (2025). 'Whoever needs to see it, will see it': Motivations and labor of creating algorithmically conspiritual content on TikTok. <em>Proc. ACM Hum.-Comput. Interact.,</em> 9(7).</p>
+
+    <p><strong>De, A.</strong>, & Lu, Z. (2024). #Poetsofinstagram: Navigating the practices and challenges of novice poets on Instagram. <em>CHI 2024.</em> <a href="https://doi.org/10.1145/3613904.3642173" target="_blank">https://doi.org/10.1145/3613904.3642173</a></p>
+
+    <p>Cotter, K., Jonas, R., & <strong>De, A.</strong> (2025). "Why can't I just be fat and exist on the internet?": The embeddedness of antifatness on TikTok. <em>Platforms & Society,</em> 2. <a href="https://doi.org/10.1177/29768624251377163" target="_blank">https://doi.org/10.1177/29768624251377163</a></p>
+
+    <p><strong>De, A.</strong>, Cotter, K., Kanthawala, S., McAtee, H., & Ritchart, A. (2025). 'Whoever needs to see it, will see it': Motivations and labor of creating algorithmically conspiritual content on TikTok. <em>Proc. ACM Hum.-Comput. Interact.,</em> 9(7).</p>
+
     <p>Jäger, S., & Maier, F. (2016). Analysing discourses and dispositives: A Foucauldian approach to theory and methodology. In R. Wodak & M. Meyer (Eds.), <em>Methods of Critical Discourse Studies,</em> pp. 109–136. Sage.</p>
+
     <p>Foucault, M. (1981). The order of discourse. In R. Young (Ed.), <em>Untying the Text: A Post-Structuralist Reader,</em> pp. 48–78. Routledge & Kegan Paul.</p>
-    <p>Proferes, N., Cotter, K., Thorson, K., De, A., Chang, C.-F., & Battocchio, A. F. (2025). Local platformized utopias? Corporate discourse, community groups, and volunteer moderation. <em>Platforms & Society,</em> 2. <a href="https://doi.org/10.1177/29768624251356761" target="_blank">https://doi.org/10.1177/29768624251356761</a></p>
-    <p>Cotter, K., Kumar, P., De, A., & Tan, R. (2024). Technology is a wish your heart makes: How Disney harnesses practical magic discourse to legitimize MyMagic+. <em>New Media & Society.</em> <a href="https://doi.org/10.1177/14614448241230923" target="_blank">https://doi.org/10.1177/14614448241230923</a></p>
-    <p>Davis, B. C., Cotter, K., Kanthawala, S., Liu, Y., De, A., Ritchart, A., & McAtee, H. (2025). God(bots) and authority: Trust and faith in the age of AI. <em>AoIR 2025.</em></p>
+
+    <p>Proferes, N., Cotter, K., Thorson, K., <strong>De, A.</strong>, Chang, C.-F., & Battocchio, A. F. (2025). Local platformized utopias? Corporate discourse, community groups, and volunteer moderation. <em>Platforms & Society,</em> 2. <a href="https://doi.org/10.1177/29768624251356761" target="_blank">https://doi.org/10.1177/29768624251356761</a></p>
+
+    <p>Cotter, K., Kumar, P., <strong>De, A.</strong>, & Tan, R. (2024). Technology is a wish your heart makes: How Disney harnesses practical magic discourse to legitimize MyMagic+. <em>New Media & Society.</em> <a href="https://doi.org/10.1177/14614448241230923" target="_blank">https://doi.org/10.1177/14614448241230923</a></p>
+
+    <p>Davis, B. C., Cotter, K., Kanthawala, S., Liu, Y., <strong>De, A.</strong>, Ritchart, A., & McAtee, H. (2025). God(bots) and authority: Trust and faith in the age of AI. <em>AoIR 2025.</em></p>
+
     <p>van Dijck, J., Poell, T., & de Waal, M. (2018). <em>The Platform Society: Public Values in a Connective World.</em> Oxford University Press.</p>
-    <p>De, A., & Cotter, K. (2026). The discursive flexibility of changecraft: Platform change discourse in Meta, TikTok, YouTube, and X. <em>Platforms & Society,</em> 3. <a href="https://doi.org/10.1177/29768624251408212" target="_blank">https://doi.org/10.1177/29768624251408212</a></p>
-    <p>De, A., Lima, G., & Zou, Y. (2026). What is safety? Corporate discourse, power, and the politics of generative AI safety. <em>CHI 2026.</em></p>
-    <p>De, A., Kanthawala, S., & Maddox, J. (2025). Who gets heard? Calling out the "hard-to-reach" myth for non-WEIRD populations. <em>ACM FAccT 2025,</em> 855–867. <a href="https://doi.org/10.1145/3715275.3732055" target="_blank">https://doi.org/10.1145/3715275.3732055</a></p>
-    <p>Gautam, S., Chandra, M., De, A., Chakravorthy, T., Malik, G., & De Choudhury, M. (2025). Towards experience-centered AI: A framework for integrating lived experience. <em>AAAI/ACM AIES,</em> 8(2), 1062–1077. <a href="https://doi.org/10.1609/aies.v8i2.36611" target="_blank">https://doi.org/10.1609/aies.v8i2.36611</a></p>
+
+    <p><strong>De, A.</strong>, & Cotter, K. (2026). The discursive flexibility of changecraft: Platform change discourse in Meta, TikTok, YouTube, and X. <em>Platforms & Society,</em> 3. <a href="https://doi.org/10.1177/29768624251408212" target="_blank">https://doi.org/10.1177/29768624251408212</a></p>
+
+    <p><strong>De, A.</strong>, Lima, G., & Zou, Y. (2026). What is safety? Corporate discourse, power, and the politics of generative AI safety. <em>CHI 2026.</em></p>
+
+    <p><strong>De, A.</strong>, Kanthawala, S., & Maddox, J. (2025). Who gets heard? Calling out the "hard-to-reach" myth for non-WEIRD populations. <em>ACM FAccT 2025,</em> 855–867. <a href="https://doi.org/10.1145/3715275.3732055" target="_blank">https://doi.org/10.1145/3715275.3732055</a></p>
+
+    <p>Gautam, S., Chandra, M., <strong>De, A.</strong>, Chakravorthy, T., Malik, G., & De Choudhury, M. (2025). Towards experience-centered AI: A framework for integrating lived experience. <em>AAAI/ACM AIES,</em> 8(2), 1062–1077. <a href="https://doi.org/10.1609/aies.v8i2.36611" target="_blank">https://doi.org/10.1609/aies.v8i2.36611</a></p>
+
     <p>Kershaw, K. (2024). SCADS collaborators build reporting tools for intelligence community. <em>NC State LAS.</em> <a href="https://ncsu-las.org/2024/09/thirdscadsintelligence-reportingtools/" target="_blank">https://ncsu-las.org/2024/09/thirdscadsintelligence-reportingtools/</a></p>
   </div>
 
