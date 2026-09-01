@@ -3,47 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ankolika De — Researcher</title>
+<title>Research Statement — Ankolika De</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --black: #111111;
-    --black-soft: #1e1e1e;
-    --black-card: #222222;
     --pink: #f0427a;
-    --pink-light: #f9a8c4;
     --pink-pale: #fff0f5;
-    --pink-mid: #fcd6e6;
     --white: #ffffff;
     --off-white: #fafafa;
-    --muted: #777777;
-    --light-muted: #bbbbbb;
+    --muted: #666666;
     --border: #eeeeee;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
 
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--off-white);
-    color: var(--black);
-    overflow-x: hidden;
+    color: #222;
   }
 
   /* ─── NAV ─── */
   nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem;
     background: var(--white);
     border-bottom: 1px solid var(--border);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
   }
 
   .nav-logo {
@@ -52,910 +41,245 @@
     font-weight: 600;
     color: var(--black);
     text-decoration: none;
-    letter-spacing: 0.02em;
   }
 
   .nav-logo span { color: var(--pink); }
 
-  .nav-links {
-    display: flex;
-    gap: 0.5rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 400;
+  .nav-back {
+    font-size: 0.75rem;
+    font-weight: 500;
     color: var(--muted);
     text-decoration: none;
-    padding: 0.4rem 1rem;
+    padding: 0.45rem 1.1rem;
     border-radius: 999px;
-    transition: all 0.2s;
+    border: 1px solid var(--border);
   }
 
-  .nav-links a:hover { color: var(--black); background: var(--pink-pale); }
+  .nav-back:hover { color: var(--pink); border-color: var(--pink); background: var(--pink-pale); }
 
-  .nav-links a.active {
-    color: var(--white);
-    background: var(--pink);
-    font-weight: 500;
-  }
-
-  /* ─── HERO ─── */
-  .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 380px 1fr;
-    padding-top: 65px;
-  }
-
-  .hero-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 2rem;
-    background: var(--black);
-    position: sticky;
-    top: 65px;
-    height: calc(100vh - 65px);
-    overflow-y: auto;
-  }
-
-  .hero-photo-wrap {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid var(--pink);
-    box-shadow: 0 0 0 8px rgba(240,66,122,0.15);
-    margin-bottom: 1.5rem;
-    flex-shrink: 0;
-  }
-
-  .hero-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-  }
-
-  .hero-name-block { text-align: center; margin-bottom: 1rem; }
-
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--white);
-    line-height: 1.1;
-    margin-bottom: 0.4rem;
-  }
-
-  .hero h1 em { font-style: italic; color: var(--pink); }
-
-  .hero-role {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--pink-light);
-    margin-bottom: 0.3rem;
-  }
-
-  .hero-affil {
-    font-size: 0.75rem;
-    color: var(--light-muted);
-    text-align: center;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-social-links {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .social-chip {
-    font-size: 0.68rem;
-    font-weight: 500;
-    color: var(--white);
-    background: var(--black-card);
-    border: 1px solid rgba(255,255,255,0.12);
-    padding: 0.4rem 0.9rem;
-    border-radius: 999px;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-
-  .social-chip:hover { background: var(--pink); border-color: var(--pink); }
-
-  .hero-job-alert {
-    background: var(--pink);
-    color: white;
-    padding: 1rem 1.25rem;
-    border-radius: 16px;
-    font-size: 0.76rem;
-    line-height: 1.6;
-    text-align: center;
-    width: 100%;
-  }
-
-  .hero-job-alert strong {
-    display: block;
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 0.4rem;
-    opacity: 0.9;
-  }
-
-  /* ─── HERO RIGHT ─── */
-  .hero-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 4rem 5rem;
+  /* ─── DOCUMENT ─── */
+  .doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3.5rem 2rem 6rem;
     background: var(--white);
   }
 
-  .hero-tag {
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--pink);
-    margin-bottom: 1rem;
+  .doc-letterhead {
     display: flex;
-    align-items: center;
-    gap: 0.6rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid var(--black);
   }
 
-  .hero-tag::before {
-    content: '';
-    display: block;
-    width: 1.5rem;
-    height: 2px;
-    background: var(--pink);
-    border-radius: 2px;
-  }
-
-  .hero-greeting {
+  .letterhead-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 3vw, 3rem);
-    font-weight: 300;
-    line-height: 1.15;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 1.5;
+  }
+
+  .letterhead-address {
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.6;
+    text-align: right;
+  }
+
+  .doc-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
     margin-bottom: 2rem;
     color: var(--black);
   }
 
-  .hero-greeting em { font-style: italic; color: var(--pink); }
-
-  .hero-bio {
-    font-size: 0.93rem;
+  .doc p {
+    font-size: 0.95rem;
     line-height: 1.85;
-    color: #444;
     margin-bottom: 1.1rem;
-    max-width: 620px;
+    color: #222;
+    text-align: justify;
   }
 
-  .hero-bio a { color: var(--pink); text-decoration: none; font-weight: 500; }
-  .hero-bio a:hover { text-decoration: underline; }
-
-  .hero-divider {
-    width: 3rem;
-    height: 3px;
-    background: var(--pink);
-    border-radius: 4px;
-    margin: 1.75rem 0;
-  }
-
-  .hero-highlights {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-top: 0.5rem;
-  }
-
-  .highlight-item {
-    background: var(--pink-pale);
-    border: 1px solid var(--pink-mid);
-    border-radius: 16px;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    min-width: 100px;
-  }
-
-  .highlight-num {
+  .doc h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--pink);
-    line-height: 1;
-    margin-bottom: 0.25rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 2.25rem;
+    margin-bottom: 0.9rem;
+    color: var(--black);
   }
 
-  .highlight-label {
-    font-size: 0.62rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-    line-height: 1.4;
+  .doc strong { font-weight: 600; color: var(--black); }
+
+  .refs {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
   }
 
-  /* ─── BUTTONS ─── */
+  .refs h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+  }
+
+  .refs p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 0.7rem;
+    text-align: left;
+  }
+
+  .refs a { color: var(--pink); text-decoration: none; }
+  .refs a:hover { text-decoration: underline; }
+
+  .doc-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
   .btn-primary {
     background: var(--pink);
     color: white;
-    padding: 0.75rem 1.75rem;
+    padding: 0.7rem 1.6rem;
     border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all 0.2s;
-    display: inline-block;
-  }
-
-  .btn-primary:hover { background: var(--black); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(240,66,122,0.3); }
-
-  .btn-secondary {
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--muted);
-    text-decoration: none;
-    border-bottom: 1px solid var(--light-muted);
-    padding-bottom: 2px;
-    transition: all 0.2s;
-  }
-
-  .btn-secondary:hover { color: var(--pink); border-color: var(--pink); }
-
-  .scholar-btn {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--pink);
-    background: var(--pink-pale);
-    border: 1.5px solid var(--pink);
-    padding: 0.5rem 1.2rem;
-    border-radius: 999px;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: all 0.2s;
-    display: inline-block;
-  }
-
-  .scholar-btn:hover { background: var(--pink); color: white; }
-
-  /* ─── SECTION STYLES ─── */
-  section { padding: 6rem 5rem; position: relative; }
-
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 3.5rem;
-  }
-
-  .section-num {
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    color: var(--white);
-    background: var(--pink);
-    padding: 0.3rem 0.6rem;
-    border-radius: 999px;
-  }
-
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 3vw, 2.8rem);
-    font-weight: 400;
-    letter-spacing: -0.01em;
-    color: var(--black);
-  }
-
-  .section-line {
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  /* ─── RESEARCH INTERESTS ─── */
-  .interests {
-    background: var(--black);
-    padding: 6rem 5rem;
-  }
-
-  .interests .section-title { color: var(--white); }
-  .interests .section-num { background: var(--pink); color: white; }
-  .interests .section-line { background: rgba(255,255,255,0.1); }
-
-  .interest-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-  }
-
-  .interest-item {
-    background: var(--black-card);
-    padding: 1.75rem 1.5rem;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.06);
-    transition: all 0.25s;
-    cursor: default;
-  }
-
-  .interest-item:hover {
-    background: var(--pink);
-    border-color: var(--pink);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(240,66,122,0.3);
-  }
-
-  .interest-icon { font-size: 1.6rem; margin-bottom: 0.75rem; display: block; }
-
-  .interest-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
-    font-weight: 400;
-    color: var(--white);
-    line-height: 1.3;
-  }
-
-  /* ─── PUBLICATIONS ─── */
-  #publications { background: var(--off-white); }
-
-  .pub-list { display: flex; flex-direction: column; gap: 0.75rem; }
-
-  .pub-item {
-    display: grid;
-    grid-template-columns: 3.5rem 1fr auto;
-    gap: 1.5rem;
-    align-items: start;
-    padding: 1.5rem 1.75rem;
-    background: var(--white);
-    border-radius: 16px;
-    border: 1px solid var(--border);
-    transition: all 0.2s;
-    cursor: default;
-  }
-
-  .pub-item:hover { border-color: var(--pink-light); box-shadow: 0 4px 20px rgba(240,66,122,0.08); transform: translateY(-2px); }
-
-  .pub-num {
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: var(--pink);
-    background: var(--pink-pale);
-    padding: 0.3rem 0.5rem;
-    border-radius: 8px;
-    text-align: center;
-    align-self: start;
-    margin-top: 0.1rem;
-  }
-
-  .pub-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 1.45;
-    margin-bottom: 0.4rem;
-    color: var(--black);
-  }
-
-  .pub-authors {
-    font-size: 0.77rem;
-    color: var(--muted);
-    margin-bottom: 0.35rem;
-    line-height: 1.5;
-  }
-
-  .pub-authors strong { color: var(--pink); font-weight: 600; }
-
-  .pub-venue {
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.06em;
-    color: var(--black);
     text-transform: uppercase;
-    background: #f0f0f0;
-    padding: 0.2rem 0.6rem;
-    border-radius: 999px;
+    text-decoration: none;
     display: inline-block;
   }
 
-  .pub-badge {
-    font-size: 0.58rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    background: var(--pink);
-    color: white;
-    padding: 0.3rem 0.75rem;
-    border-radius: 999px;
-    white-space: nowrap;
-    align-self: start;
-  }
+  .btn-primary:hover { background: var(--black); }
 
-  .pub-badge.gold { background: var(--black); color: white; }
-
-  /* ─── EDUCATION ─── */
-  .edu-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .edu-item {
-    padding: 2.5rem;
-    background: var(--white);
-    border-radius: 24px;
-    border: 1px solid var(--border);
-    transition: all 0.25s;
-  }
-
-  .edu-item:hover { border-color: var(--pink); box-shadow: 0 8px 30px rgba(240,66,122,0.1); transform: translateY(-3px); }
-
-  .edu-year {
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--white);
-    background: var(--pink);
-    padding: 0.3rem 0.8rem;
-    border-radius: 999px;
-    display: inline-block;
-    margin-bottom: 1.25rem;
-  }
-
-  .edu-degree {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.3;
-    margin-bottom: 0.5rem;
-    color: var(--black);
-  }
-
-  .edu-school {
-    font-size: 0.83rem;
-    color: var(--muted);
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-
-  .edu-note {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--pink);
-    background: var(--pink-pale);
-    padding: 0.4rem 0.8rem;
-    border-radius: 999px;
-    display: inline-block;
-  }
-
-  /* ─── AWARDS ─── */
-  .awards-section { background: var(--black); }
-  .awards-section .section-title { color: var(--white); }
-  .awards-section .section-num { background: var(--pink); }
-  .awards-section .section-line { background: rgba(255,255,255,0.1); }
-
-  .award-list { display: flex; flex-direction: column; gap: 1rem; }
-
-  .award-item {
-    display: grid;
-    grid-template-columns: 5rem 1fr;
-    gap: 1.5rem;
-    align-items: start;
-    padding: 1.5rem 2rem;
-    background: var(--black-card);
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.06);
-    transition: all 0.2s;
-  }
-
-  .award-item:hover { border-color: var(--pink); box-shadow: 0 6px 24px rgba(240,66,122,0.2); }
-
-  .award-year {
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    color: var(--white);
-    background: var(--pink);
-    padding: 0.3rem 0.6rem;
-    border-radius: 8px;
-    text-align: center;
-    align-self: start;
-    margin-top: 0.1rem;
-  }
-
-  .award-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 1.4;
-    margin-bottom: 0.35rem;
-    color: var(--white);
-  }
-
-  .award-desc {
-    font-size: 0.78rem;
-    color: var(--light-muted);
-    line-height: 1.6;
-  }
-
-  /* ─── RESEARCH AGENDA ─── */
-  .research-agenda-section { background: var(--off-white); }
-
-  .agenda-placeholder {
-    padding: 3rem;
-    background: var(--white);
-    border: 1px dashed var(--pink-mid);
-    border-radius: 20px;
-    text-align: center;
-  }
-
-  .agenda-placeholder p {
-    font-size: 0.9rem;
-    color: var(--muted);
-    line-height: 1.7;
-    max-width: 560px;
-    margin: 0 auto;
-  }
-
-  .agenda-intro {
-    max-width: 700px;
-    margin: 0 auto 2.5rem;
-    text-align: center;
-  }
-
-  .agenda-intro p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
-    font-style: italic;
-    line-height: 1.7;
-    color: #333;
-  }
-
-  .agenda-cta {
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  /* ─── FOOTER ─── */
   footer {
     background: var(--black);
-    padding: 1.5rem 5rem;
+    padding: 1.25rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   .footer-text {
-    font-size: 0.62rem;
+    font-size: 0.6rem;
     letter-spacing: 0.1em;
     color: rgba(255,255,255,0.25);
     text-transform: uppercase;
   }
 
-  /* ─── ANIMATIONS ─── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero-left { animation: fadeUp 0.7s 0.1s both; }
-  .hero-right { animation: fadeUp 0.7s 0.25s both; }
-
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; }
-    .hero-left { position: relative; top: 0; height: auto; padding: 3rem 2rem 2rem; }
-    .hero-right { padding: 2.5rem 2rem; }
-    section { padding: 4rem 2rem; }
-    .interests { padding: 4rem 2rem; }
-    footer { padding: 1.5rem 2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
-    .interest-grid { grid-template-columns: repeat(2, 1fr); }
-    .edu-grid { grid-template-columns: 1fr; }
-    .pub-item { grid-template-columns: auto 1fr; }
-    .pub-badge { display: none; }
+    .doc { padding: 2.5rem 1.25rem 4rem; }
+    .doc-letterhead { flex-direction: column; gap: 0.75rem; }
+    .letterhead-address { text-align: left; }
+    footer { padding: 1.25rem 1.5rem; flex-direction: column; gap: 0.4rem; text-align: center; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">Ankolika <span>De</span></a>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#research-agenda">Research Agenda</a></li>
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#awards">Awards</a></li>
-    <li><a href="#updates">Updates</a></li>
-  </ul>
+  <a class="nav-logo" href="index.html">Ankolika <span>De</span></a>
+  <a class="nav-back" href="index.html#research-agenda">← Back to Research Agenda</a>
 </nav>
 
-<!-- HERO / ABOUT -->
-<section class="hero" id="home">
-  <!-- LEFT: Photo + identity -->
-  <div class="hero-left">
-    <div class="hero-photo-wrap">
-      <img src="ankolika.jpg" alt="Ankolika De" class="hero-photo" />
+<div class="doc">
+
+  <div class="doc-letterhead">
+    <div class="letterhead-name">
+      Department of Human-Centered Computing and Social Informatics<br>
+      College of Information Sciences and Technology<br>
+      The Pennsylvania State University
     </div>
-    <div class="hero-name-block">
-      <h1>Ankolika <em>De</em></h1>
-      <div class="hero-role">Inaugural Postdoctoral Fellow</div>
-      <div class="hero-affil">
-        Vanderbilt University<br>College of Connected Computing<br>Computing + Society
-      </div>
-    </div>
-    <div class="hero-social-links">
-      <a href="https://scholar.google.com/citations?user=ankolikade" target="_blank" class="social-chip">Scholar</a>
-      <a href="https://www.linkedin.com/in/ankolikade" target="_blank" class="social-chip">LinkedIn</a>
+    <div class="letterhead-address">
+      Eric J. Barron Innovation Hub<br>
+      123 South Burrowes Street<br>
+      University Park, PA 16801-3867<br>
+      814-865-3528 &nbsp;·&nbsp; ist.psu.edu
     </div>
   </div>
 
-  <!-- RIGHT: About me bio -->
-  <div class="hero-right">
-    <div class="hero-tag">About Me</div>
-    <h2 class="hero-greeting">Hello! I'm <em>Ankolika</em>,<br>an interdisciplinary researcher.</h2>
+  <div class="doc-title">Research Statement</div>
 
-    <p class="hero-bio">I am the inaugural <strong>Postdoctoral Fellow at Vanderbilt University's College of Connected Computing</strong>, in the Computing + Society program. I study how people engage with and adapt to platform technologies — including AI systems and social media — and analyze how technological change is framed in corporate and public discourse.</p>
+  <p>I study <strong>what computing technologies make possible, for whom, and at whose expense</strong>. I do so by examining how communities appropriate platform technologies to support forms of labor and social organization that these systems were not originally designed to accommodate. In parallel, I analyse how institutional actors, including platform corporations and AI developers, deploy discourse to naturalize particular technological trajectories while rendering alternative sociotechnical arrangements illegible, and how the epistemological conditions of computing research itself reproduce these exclusions while advocating for more participatory, community-grounded intervention.</p>
 
-    <p class="hero-bio">I collaborate with communities to design more inclusive and accountable systems. Using methods such as interviews, focus groups, content and discourse analysis, and participatory design, I center user perspectives. My research draws from <strong>Human-Computer Interaction, Information Sciences, Media Studies, Critical Platform Studies,</strong> and Science and Technology Studies.</p>
+  <h2>Appropriation, Infrastructuring, and Design</h2>
 
-    <p class="hero-bio">I hold a Ph.D. in Informatics from <strong>Pennsylvania State University</strong> and a B.S. in Computer Science with a minor in Psychology from <strong>City University of Hong Kong</strong>, where I graduated with First Class Honours. My work has been published at CHI, CSCW, ICA, FAccT, AIES, and in journals including <em>New Media & Society</em>, <em>Platforms & Society</em>, and <em>Convergence</em>.</p>
+  <p>My research investigates how users <strong>appropriate</strong> digital platforms, particularly highlighting the labour-intensive nature of this process. Appropriation is the situated, ongoing process by which users repurpose technologies within their contexts to make them their own (Stevens, et al., 2009). It is also closely tied to infrastructuring, or the intentional work of building and maintaining systems through appropriation (Star, 1999; Plantin et al., 2019). I have investigated appropriation practices across a range of contexts, including early work on how poets appropriate Instagram's visual format to publish and share textual content (De & Lu, 2024), activist appropriation of Instagram (De & Cotter, 2025), small businesses' use of WhatsApp for commercial purposes (De, 2025), fat liberationists' use of social media platforms as information-seeking hubs (Jonas et al., 2024; Cotter et al., 2025), and users' and creators' viewing, creation, presentation, and sharing of spiritual and religious content (Cotter et al., 2024; De et al., 2025; Kanthawala et al., 2023).</p>
 
-    <p class="hero-bio">Outside of research, I'm an avid <strong>Bharatanatyam dancer</strong> and was part of Natya — Penn State's only competitive classical dance team. I enjoy reading, cooking, and travelling.</p>
+  <p>Through these, my work is among the first to empirically show that as platforms grow more complex, they <strong>embed colonial undertones of standardization, privileging Eurocentric notions of innovation</strong>. I term this process <strong>coercive professionalization</strong>, where Eurocentric ideas about what it means to use a platform effectively and professionally can be detrimental to existing forms of appropriation. My findings build a case for <strong>designs prioritizing customizability within appropriation, preserving local and community-specific appropriations rather than enforcing rigid, top-down updates that disrupt established workflows and social interactions.</strong> This work is being extended through partnerships with Lips.Social, an alternative social media platform, with whom my team and I are collaborating to speculate and prototype <strong>scalable alternative platforms with community-oriented governance and decision-making structures.</strong></p>
 
-  </div>
-</section>
+  <h2>Discourse, Power, and the Construction of Technological Futures</h2>
 
-<!-- RESEARCH AGENDA -->
-<section class="research-agenda-section" id="research-agenda">
-  <div class="section-header">
-    <div class="section-num">01</div>
-    <h2 class="section-title">Research Agenda</h2>
-    <div class="section-line"></div>
-  </div>
+  <p>A second strand examines how institutional actors construct discursive frameworks that position technological innovation as <strong>inevitable, beneficial, or necessary</strong>, thereby foreclosing meaningful deliberation about alternatives. This inquiry emerged from an empirical observation: the communities we studied frequently drew upon corporate and media discourse to develop intuitive, folk theories about platforms they were already using, with significant consequences for how they understood their own agency and rights within these systems. To account for the communicative strategies through which platforms manage user interpretations of change, we developed the concept of <strong>changecraft</strong>, a structured discursive practice that frames algorithmic and policy transformations in ways that serve institutional interests, naturalize platform authority, and circumscribe users' sense of possible response (De & Cotter, 2026). Earlier work in this strand identified the broader ideological scaffolding of platform discourse, including the mobilization of utopian imaginaries (Proferes et al., 2025) and appeals to "magic" (Cotter et al., 2024), through which corporations render AI and platform technologies as inherently progressive and socially beneficial, as well as the ways in which AI systems encode and reproduce forms of religious authority through both their design and communicative strategies (Davis et al., 2025).</p>
 
-  <div class="agenda-intro">
-    <p>I study how power is produced, stabilized, and reconfigured in sociotechnical systems — through platform appropriation, institutional discourse, and the politics of research itself.</p>
-  </div>
+  <p>My ongoing work on generative AI safety discourse extends this analysis by examining how institutions mobilize a shifting repertoire of metaphors depicting existential risk, mundane utility, and appeals to responsible self-regulation, to stabilize particular interpretations of AI's risks and benefits (De et al., 2026). As future work, I aim to develop discursive toolkits that render these patterns visible, enabling more critical engagement with how claims about safety are constructed and mobilized in practice.</p>
 
-  <div class="agenda-cta">
-    <a href="research-statement.html" class="btn-primary">Read My Research Statement →</a>
-  </div>
-</section>
+  <h2>Epistemology, Method, and the Politics of Research Infrastructure</h2>
 
-<!-- PUBLICATIONS -->
-<section id="publications">
-  <div class="section-header">
-    <div class="section-num">02</div>
-    <h2 class="section-title">Selected Publications</h2>
-    <div class="section-line"></div>
-    <a href="https://scholar.google.com/citations?user=ankolikade" target="_blank" class="scholar-btn">View All on Google Scholar →</a>
-  </div>
+  <p>The third strand takes as its object the institutional conditions that determine what counts as legitimate knowledge in computing research. I argue that the field's gatekeeping mechanisms, including <strong>IRB frameworks, recruitment norms, and publication standards</strong>, are not neutral but epistemically consequential, systematically reproducing the same exclusions that critical computing scholarship seeks to address. At a moment when AI development is becoming increasingly concentrated and top-down, the recovery and centering of local, situated, and community-held knowledge becomes an urgent critical project. I examine how IRB structures and publication norms, designed primarily for Western academic contexts, are ill-equipped to support non-Western, community-grounded research methodologies, foreclosing the forms of knowledge most consequential for critical computing (De et al., 2025). A related line of work extends this into practice, offering frameworks for integrating lived experience into AI system design as a constitutive input rather than a post-hoc validation mechanism (Gautam et al., 2025).</p>
 
-  <div class="pub-list">
+  <h2>Future Research Agenda</h2>
 
-    <div class="pub-item">
-      <div class="pub-num">2026</div>
-      <div class="pub-content">
-        <div class="pub-title">What is Safety? Corporate Discourse, Power, and the Politics of Generative AI Safety</div>
-        <div class="pub-authors"><strong>De, A.</strong>, Lima, G., & Zou, Y.</div>
-        <div class="pub-venue">ACM CHI 2026</div>
-      </div>
-    </div>
+  <p>My research is organized around a central question: how power is produced, stabilized, and potentially reconfigured in sociotechnical systems. I hope to extend this agenda through two interconnected directions: (1) imagining alternative, more community-centered technologies, and (2) critically examining discourse and representation in computational systems.</p>
 
-    <div class="pub-item">
-      <div class="pub-num">2026</div>
-      <div class="pub-content">
-        <div class="pub-title">The Discursive Flexibility of Changecraft: Platform Change Discourse in Meta, TikTok, YouTube, and X</div>
-        <div class="pub-authors"><strong>De, A.</strong> & Cotter, K.</div>
-        <div class="pub-venue">Platforms & Society</div>
-      </div>
-    </div>
+  <p>The first direction emerges from my ongoing collaboration with Lips.Social. Drawing on interviews and participatory workshops currently in a pilot phase, this project examines user needs and barriers within community-based governance systems, foregrounding questions of accessibility, sustained user agency, and scalability models that privilege depth of engagement over quantitative growth metrics. This work aims to develop transferable frameworks, and theories for bottom-up, community-driven design, with implications for institutional design, policy, and collective technological stewardship.</p>
 
-    <div class="pub-item">
-      <div class="pub-num">2025</div>
-      <div class="pub-content">
-        <div class="pub-title">"Business on WhatsApp is tough now—but am I really a businesswoman?" Exploring Challenges with Adapting to Changes in WhatsApp Business</div>
-        <div class="pub-authors"><strong>De, A.</strong></div>
-        <div class="pub-venue">ACM CHI 2025</div>
-      </div>
-    </div>
+  <p>The second direction extends my discourse-analytic research on corporate and public narratives surrounding AI. Building on the fact that discourses manifest as recurring ideological frames and strategic silences, I aim to develop evidence-based governance frameworks that equip regulators, civil society actors, and industry practitioners with tools for more transparent, accountable, and inclusive AI communication, while also engaging broader questions of how narratives of innovation influence regulatory design and public trust in computational systems.</p>
 
-    <div class="pub-item">
-      <div class="pub-num">2025</div>
-      <div class="pub-content">
-        <div class="pub-title">Who Gets Heard? Calling Out the "Hard-to-Reach" Myth for Non-WEIRD Populations' Recruitment and Involvement in Research</div>
-        <div class="pub-authors"><strong>De, A.</strong>, Kanthawala, S., & Maddox, J.</div>
-        <div class="pub-venue">ACM FAccT 2025</div>
-      </div>
-    </div>
+  <p>These directions also align strongly with existing funding avenues such as the MacArthur Foundation's Humanity AI initiative, which supports work on AI governance, public interest technology, and community-centered AI futures, as well as broader humanities and public scholarship funding through the National Endowment for the Humanities. I also hope to apply to these funding cycles.</p>
 
-    <div class="pub-item">
-      <div class="pub-num">2025</div>
-      <div class="pub-content">
-        <div class="pub-title">Who is a Good Digital Activist? Exploring Social Justice Activists' Adaptation to Instagram's Algorithmic Changes</div>
-        <div class="pub-authors"><strong>De, A.</strong> & Cotter, K.</div>
-        <div class="pub-venue">Proc. ACM Hum.-Comput. Interact.</div>
-      </div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-num">2025</div>
-      <div class="pub-content">
-        <div class="pub-title">Towards Experience-Centered AI: A Framework for Integrating Lived Experience in Design and Development</div>
-        <div class="pub-authors">Gautam, S., Chandra, M., <strong>De, A.</strong>, Chakravorti, T., et al.</div>
-        <div class="pub-venue">AAAI/ACM AIES 2025</div>
-      </div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-num">2024</div>
-      <div class="pub-content">
-        <div class="pub-title">#PoetsofInstagram: Navigating the Practices and Challenges of Novice Poets on Instagram</div>
-        <div class="pub-authors"><strong>De, A.</strong> & Lu, Z.</div>
-        <div class="pub-venue">ACM CHI 2024</div>
-      </div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-num">2023</div>
-      <div class="pub-content">
-        <div class="pub-title">Algorithmic Conspirituality: Explicating its Emergence, Dimensions, and Persuasibility</div>
-        <div class="pub-authors">Kanthawala, S., Cotter, K., Ritchart, A., <strong>De, A.</strong>, et al.</div>
-        <div class="pub-venue">New Media & Society</div>
-      </div>
-      <div class="pub-badge gold">★ Best Paper ICA 2023</div>
-    </div>
-
+  <div class="refs">
+    <h2>References</h2>
+    <p>De, A. (2025). "Business on WhatsApp is tough now — but am I really a businesswoman?" Exploring challenges with adapting to changes in WhatsApp Business. <em>CHI 2025.</em> <a href="https://doi.org/10.1145/3706598.3713988" target="_blank">https://doi.org/10.1145/3706598.3713988</a></p>
+    <p>De, A., & Cotter, K. (2025). Who is a good digital activist? Exploring social justice activists' adaptation to Instagram's algorithmic changes. <em>Proc. ACM Hum.-Comput. Interact.,</em> 9(7). <a href="https://doi.org/10.1145/3757440" target="_blank">https://doi.org/10.1145/3757440</a></p>
+    <p>Cotter, K., Ritchart, A., De, A., Foyle, K., Kanthawala, S., McAtee, H., & Watson, T.X. (2024). If you're reading this, it's meant for you: The reflexive ambivalence of algorithmic conspirituality. <em>Convergence,</em> 0(0).</p>
+    <p>Kanthawala, S., Cotter, K., Ritchart, A., De, A., McAtee, H., Yun, C., & DeCook, J. (2023). Algorithmic conspirituality: Explicating its emergence, dimensions, and persuasibility. <em>New Media & Society,</em> 0(0).</p>
+    <p>De, A. (2024). A situated-infrastructuring of WhatsApp for business in India. <em>CHI EA 2024.</em> <a href="https://doi.org/10.1145/3613905.3651034" target="_blank">https://doi.org/10.1145/3613905.3651034</a></p>
+    <p>De, A., & Cotter, K. (2025). A taxonomy for rapidly changing social media platforms. <em>AoIR 2025.</em></p>
+    <p>Jonas, R. M., De, A., & Cotter, K. (2024). "We happen to be different and different is not bad": Designing for intersectional fat-positive information-seeking. <em>CHI 2024.</em> <a href="https://doi.org/10.1145/3613904.3642599" target="_blank">https://doi.org/10.1145/3613904.3642599</a></p>
+    <p>Stevens, G., Pipek, V., & Wulf, V. (2009). Appropriation infrastructure: Supporting the design of usages. In V. Pipek et al. (Eds.), <em>End-User Development,</em> LNCS 5435, pp. 45–64. Springer.</p>
+    <p>Star, S. L. (1999). The ethnography of infrastructure. <em>American Behavioral Scientist,</em> 43(3), 377–391.</p>
+    <p>Plantin, J.-C., Lagoze, C., Edwards, P. N., & Sandvig, C. (2016). Infrastructure studies meet platform studies in the age of Google and Facebook. <em>New Media & Society,</em> 20(1), 293–310.</p>
+    <p>De, A., & Lu, Z. (2024). #Poetsofinstagram: Navigating the practices and challenges of novice poets on Instagram. <em>CHI 2024.</em> <a href="https://doi.org/10.1145/3613904.3642173" target="_blank">https://doi.org/10.1145/3613904.3642173</a></p>
+    <p>Cotter, K., Jonas, R., & De, A. (2025). "Why can't I just be fat and exist on the internet?": The embeddedness of antifatness on TikTok. <em>Platforms & Society,</em> 2. <a href="https://doi.org/10.1177/29768624251377163" target="_blank">https://doi.org/10.1177/29768624251377163</a></p>
+    <p>De, A., Cotter, K., Kanthawala, S., McAtee, H., & Ritchart, A. (2025). 'Whoever needs to see it, will see it': Motivations and labor of creating algorithmically conspiritual content on TikTok. <em>Proc. ACM Hum.-Comput. Interact.,</em> 9(7).</p>
+    <p>Jäger, S., & Maier, F. (2016). Analysing discourses and dispositives: A Foucauldian approach to theory and methodology. In R. Wodak & M. Meyer (Eds.), <em>Methods of Critical Discourse Studies,</em> pp. 109–136. Sage.</p>
+    <p>Foucault, M. (1981). The order of discourse. In R. Young (Ed.), <em>Untying the Text: A Post-Structuralist Reader,</em> pp. 48–78. Routledge & Kegan Paul.</p>
+    <p>Proferes, N., Cotter, K., Thorson, K., De, A., Chang, C.-F., & Battocchio, A. F. (2025). Local platformized utopias? Corporate discourse, community groups, and volunteer moderation. <em>Platforms & Society,</em> 2. <a href="https://doi.org/10.1177/29768624251356761" target="_blank">https://doi.org/10.1177/29768624251356761</a></p>
+    <p>Cotter, K., Kumar, P., De, A., & Tan, R. (2024). Technology is a wish your heart makes: How Disney harnesses practical magic discourse to legitimize MyMagic+. <em>New Media & Society.</em> <a href="https://doi.org/10.1177/14614448241230923" target="_blank">https://doi.org/10.1177/14614448241230923</a></p>
+    <p>Davis, B. C., Cotter, K., Kanthawala, S., Liu, Y., De, A., Ritchart, A., & McAtee, H. (2025). God(bots) and authority: Trust and faith in the age of AI. <em>AoIR 2025.</em></p>
+    <p>van Dijck, J., Poell, T., & de Waal, M. (2018). <em>The Platform Society: Public Values in a Connective World.</em> Oxford University Press.</p>
+    <p>De, A., & Cotter, K. (2026). The discursive flexibility of changecraft: Platform change discourse in Meta, TikTok, YouTube, and X. <em>Platforms & Society,</em> 3. <a href="https://doi.org/10.1177/29768624251408212" target="_blank">https://doi.org/10.1177/29768624251408212</a></p>
+    <p>De, A., Lima, G., & Zou, Y. (2026). What is safety? Corporate discourse, power, and the politics of generative AI safety. <em>CHI 2026.</em></p>
+    <p>De, A., Kanthawala, S., & Maddox, J. (2025). Who gets heard? Calling out the "hard-to-reach" myth for non-WEIRD populations. <em>ACM FAccT 2025,</em> 855–867. <a href="https://doi.org/10.1145/3715275.3732055" target="_blank">https://doi.org/10.1145/3715275.3732055</a></p>
+    <p>Gautam, S., Chandra, M., De, A., Chakravorthy, T., Malik, G., & De Choudhury, M. (2025). Towards experience-centered AI: A framework for integrating lived experience. <em>AAAI/ACM AIES,</em> 8(2), 1062–1077. <a href="https://doi.org/10.1609/aies.v8i2.36611" target="_blank">https://doi.org/10.1609/aies.v8i2.36611</a></p>
+    <p>Kershaw, K. (2024). SCADS collaborators build reporting tools for intelligence community. <em>NC State LAS.</em> <a href="https://ncsu-las.org/2024/09/thirdscadsintelligence-reportingtools/" target="_blank">https://ncsu-las.org/2024/09/thirdscadsintelligence-reportingtools/</a></p>
   </div>
 
-  <div style="text-align:center; margin-top: 3.5rem;">
-    <a href="https://scholar.google.com/citations?user=ankolikade" target="_blank" class="btn-primary" style="display:inline-block; font-size:0.72rem; letter-spacing:0.13em;">View All 17 Publications on Google Scholar →</a>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education" style="background: var(--off-white)">
-  <div class="section-header">
-    <div class="section-num">03</div>
-    <h2 class="section-title">Education</h2>
-    <div class="section-line"></div>
+  <div class="doc-cta">
+    <a href="index.html#publications" class="btn-primary">See Related Publications →</a>
   </div>
 
-  <div class="edu-grid">
-    <div class="edu-item">
-      <div class="edu-year">2022 — 2026</div>
-      <div class="edu-degree">Ph.D. Informatics<br>Human-Centered Computing & Social Informatics</div>
-      <div class="edu-school">Pennsylvania State University<br>College of Information Sciences and Technology<br>Advisor: Dr. Kelley Cotter</div>
-      <div class="edu-note">Thesis: Decentered End Users' Tensions Due to Rapid Platform Change</div>
-    </div>
-
-    <div class="edu-item">
-      <div class="edu-year">2018 — 2022</div>
-      <div class="edu-degree">B.S. Computer Science<br>Minor in Psychology</div>
-      <div class="edu-school">City University of Hong Kong<br>Department of Computer Science<br>First Class Honors · Advisor: Dr. Zhicong Lu</div>
-      <div class="edu-note">★ Best Undergraduate Research Award — Pan-Delta Competition</div>
-    </div>
-  </div>
-</section>
-
-<!-- AWARDS -->
-<section class="awards-section" id="awards">
-  <div class="section-header">
-    <div class="section-num">04</div>
-    <h2 class="section-title">Honors & Awards</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="award-list">
-    <div class="award-item">
-      <div class="award-year">2026</div>
-      <div>
-        <div class="award-name">Graduate Student Residency Grant — Penn State Humanities Institute</div>
-        <div class="award-desc">$5,000 seed funding for "Platform Discourses and User Experiences: When Design and Practice Are at Odds."</div>
-      </div>
-    </div>
-    <div class="award-item">
-      <div class="award-year">2025</div>
-      <div>
-        <div class="award-name">Alumni Association Graduate Fellowship — Fox Graduate School, Penn State</div>
-        <div class="award-desc">$5,000 award for outstanding research, given university-wide to select graduate students.</div>
-      </div>
-    </div>
-    <div class="award-item">
-      <div class="award-year">2025</div>
-      <div>
-        <div class="award-name">Runner-Up, Research Excellence in Penn State IST</div>
-        <div class="award-desc">One of the highest annual honors in the College of Information Sciences and Technology.</div>
-      </div>
-    </div>
-    <div class="award-item">
-      <div class="award-year">2025</div>
-      <div>
-        <div class="award-name">Best Doctoral Consortium Presentation — ACM GROUP</div>
-        <div class="award-desc">Best poster and presentation at the ACM GROUP Doctoral Consortium.</div>
-      </div>
-    </div>
-    <div class="award-item">
-      <div class="award-year">2024</div>
-      <div>
-        <div class="award-name">Liberatory Tech Fellow — Logic(s) by Columbia University</div>
-        <div class="award-desc">$4,000 fellowship supporting research at the intersection of technology and critical theory.</div>
-      </div>
-    </div>
-    <div class="award-item">
-      <div class="award-year">2023</div>
-      <div>
-        <div class="award-name">Best Paper Award — ICA 2023, Communication and Technology Division</div>
-        <div class="award-desc">For "Algorithmic Conspirituality: Explicating its Emergence, Dimensions, and Persuasibility."</div>
-      </div>
-    </div>
-    <div class="award-item">
-      <div class="award-year">2022</div>
-      <div>
-        <div class="award-name">Graham Endowment Fellowship — Penn State</div>
-        <div class="award-desc">Competitive $4,000 grant awarded at the start of the PhD program.</div>
-      </div>
-    </div>
-    <div class="award-item">
-      <div class="award-year">2018</div>
-      <div>
-        <div class="award-name">Full Tuition Fee Scholarship — City University of Hong Kong</div>
-        <div class="award-desc">Merit-based scholarship covering full tuition for all four undergraduate years (~$60,000 USD).</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- UPDATES -->
-<section class="research-agenda-section" id="updates">
-  <div class="section-header">
-    <div class="section-num">05</div>
-    <h2 class="section-title">Updates</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="agenda-placeholder">
-    <p>Content for this section is coming soon.</p>
-  </div>
-</section>
+</div>
 
 <footer>
   <div class="footer-text">© 2026 Ankolika De · Vanderbilt University</div>
   <div class="footer-text">College of Connected Computing · Computing + Society</div>
 </footer>
 
-<script>
-  // Active nav highlight based on scroll position
-  const sections = document.querySelectorAll('section[id], div[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { threshold: 0.3 });
-  sections.forEach(s => sectionObserver.observe(s));
-</script>
 </body>
 </html>
