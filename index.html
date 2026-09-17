@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ankolika De — Researcher</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --black: #111111;
@@ -19,14 +19,14 @@
     --off-white: #fafafa;
     --muted: #777777;
     --light-muted: #bbbbbb;
-    --border: #eeeeee;
+    --border: #dddddd;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Courier Prime', 'Courier New', monospace;
     background: var(--off-white);
     color: var(--black);
     overflow-x: hidden;
@@ -43,13 +43,12 @@
     padding: 1rem 3rem;
     background: var(--white);
     border-bottom: 1px solid var(--border);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
   }
 
   .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--black);
     text-decoration: none;
     letter-spacing: 0.02em;
@@ -64,22 +63,22 @@
   }
 
   .nav-links a {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Courier Prime', monospace;
     font-size: 0.8rem;
     font-weight: 400;
     color: var(--muted);
     text-decoration: none;
-    padding: 0.4rem 1rem;
-    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid transparent;
     transition: all 0.2s;
   }
 
-  .nav-links a:hover { color: var(--black); background: var(--pink-pale); }
+  .nav-links a:hover { color: var(--black); border-color: var(--border); }
 
   .nav-links a.active {
-    color: var(--white);
-    background: var(--pink);
-    font-weight: 500;
+    color: var(--pink);
+    border: 1px solid var(--pink);
+    font-weight: 700;
   }
 
   /* ─── HERO ─── */
@@ -103,12 +102,10 @@
   }
 
   .hero-photo-wrap {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 190px;
+    height: 190px;
     overflow: hidden;
-    border: 4px solid var(--pink);
-    box-shadow: 0 0 0 8px rgba(240,66,122,0.15);
+    border: 3px solid var(--pink);
     margin-bottom: 1.5rem;
     flex-shrink: 0;
   }
@@ -123,21 +120,20 @@
   .hero-name-block { text-align: center; margin-bottom: 1rem; }
 
   .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 400;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
     color: var(--white);
-    line-height: 1.1;
-    margin-bottom: 0.4rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
   }
 
-  .hero h1 em { font-style: italic; color: var(--pink); }
+  .hero h1 em { font-style: normal; color: var(--pink); }
 
   .hero-role {
     font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.06em;
     color: var(--pink-light);
     margin-bottom: 0.3rem;
   }
@@ -160,23 +156,22 @@
 
   .social-chip {
     font-size: 0.68rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--white);
-    background: var(--black-card);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.25);
     padding: 0.4rem 0.9rem;
-    border-radius: 999px;
     text-decoration: none;
     transition: all 0.2s;
   }
 
-  .social-chip:hover { background: var(--pink); border-color: var(--pink); }
+  .social-chip:hover { border-color: var(--pink); color: var(--pink); }
 
   .hero-job-alert {
-    background: var(--pink);
+    background: transparent;
     color: white;
+    border: 1px solid var(--pink);
     padding: 1rem 1.25rem;
-    border-radius: 16px;
     font-size: 0.76rem;
     line-height: 1.6;
     text-align: center;
@@ -186,10 +181,10 @@
   .hero-job-alert strong {
     display: block;
     font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    letter-spacing: 0.08em;
     margin-bottom: 0.4rem;
     opacity: 0.9;
+    color: var(--pink-light);
   }
 
   /* ─── HERO RIGHT ─── */
@@ -202,10 +197,9 @@
   }
 
   .hero-tag {
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     color: var(--pink);
     margin-bottom: 1rem;
     display: flex;
@@ -219,19 +213,18 @@
     width: 1.5rem;
     height: 2px;
     background: var(--pink);
-    border-radius: 2px;
   }
 
   .hero-greeting {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 3vw, 3rem);
-    font-weight: 300;
-    line-height: 1.15;
+    font-family: 'Courier Prime', monospace;
+    font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.4;
     margin-bottom: 2rem;
     color: var(--black);
   }
 
-  .hero-greeting em { font-style: italic; color: var(--pink); }
+  .hero-greeting em { font-style: normal; color: var(--pink); }
 
   .hero-bio {
     font-size: 0.93rem;
@@ -241,14 +234,13 @@
     max-width: 620px;
   }
 
-  .hero-bio a { color: var(--pink); text-decoration: none; font-weight: 500; }
-  .hero-bio a:hover { text-decoration: underline; }
+  .hero-bio a { color: var(--pink); text-decoration: underline; font-weight: 700; }
+  .hero-bio a:hover { color: var(--black); }
 
   .hero-divider {
     width: 3rem;
-    height: 3px;
+    height: 2px;
     background: var(--pink);
-    border-radius: 4px;
     margin: 1.75rem 0;
   }
 
@@ -260,18 +252,17 @@
   }
 
   .highlight-item {
-    background: var(--pink-pale);
+    background: transparent;
     border: 1px solid var(--pink-mid);
-    border-radius: 16px;
     padding: 1rem 1.5rem;
     text-align: center;
     min-width: 100px;
   }
 
   .highlight-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 400;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.7rem;
+    font-weight: 700;
     color: var(--pink);
     line-height: 1;
     margin-bottom: 0.25rem;
@@ -279,9 +270,8 @@
 
   .highlight-label {
     font-size: 0.62rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.06em;
     color: var(--muted);
     line-height: 1.4;
   }
@@ -291,21 +281,20 @@
     background: var(--pink);
     color: white;
     padding: 0.75rem 1.75rem;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
     text-decoration: none;
+    border: 1px solid var(--pink);
     transition: all 0.2s;
     display: inline-block;
   }
 
-  .btn-primary:hover { background: var(--black); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(240,66,122,0.3); }
+  .btn-primary:hover { background: var(--black); border-color: var(--black); }
 
   .btn-secondary {
-    font-size: 0.75rem;
-    font-weight: 500;
+    font-size: 0.78rem;
+    font-weight: 400;
     color: var(--muted);
     text-decoration: none;
     border-bottom: 1px solid var(--light-muted);
@@ -316,15 +305,12 @@
   .btn-secondary:hover { color: var(--pink); border-color: var(--pink); }
 
   .scholar-btn {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
     color: var(--pink);
-    background: var(--pink-pale);
-    border: 1.5px solid var(--pink);
+    background: transparent;
+    border: 1px solid var(--pink);
     padding: 0.5rem 1.2rem;
-    border-radius: 999px;
     text-decoration: none;
     white-space: nowrap;
     transition: all 0.2s;
@@ -344,20 +330,18 @@
   }
 
   .section-num {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     font-weight: 700;
-    letter-spacing: 0.2em;
-    color: var(--white);
-    background: var(--pink);
+    letter-spacing: 0.1em;
+    color: var(--pink);
+    border: 1px solid var(--pink);
     padding: 0.3rem 0.6rem;
-    border-radius: 999px;
   }
 
   .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 3vw, 2.8rem);
-    font-weight: 400;
-    letter-spacing: -0.01em;
+    font-family: 'Courier Prime', monospace;
+    font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+    font-weight: 700;
     color: var(--black);
   }
 
@@ -374,78 +358,75 @@
   }
 
   .interests .section-title { color: var(--white); }
-  .interests .section-num { background: var(--pink); color: white; }
-  .interests .section-line { background: rgba(255,255,255,0.1); }
+  .interests .section-num { border-color: var(--pink); color: var(--pink); }
+  .interests .section-line { background: rgba(255,255,255,0.15); }
 
   .interest-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    border-left: 1px solid rgba(255,255,255,0.15);
   }
 
   .interest-item {
-    background: var(--black-card);
+    background: transparent;
     padding: 1.75rem 1.5rem;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.06);
+    border-right: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
     transition: all 0.25s;
     cursor: default;
   }
 
   .interest-item:hover {
-    background: var(--pink);
-    border-color: var(--pink);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(240,66,122,0.3);
+    background: rgba(240,66,122,0.12);
   }
 
-  .interest-icon { font-size: 1.6rem; margin-bottom: 0.75rem; display: block; }
+  .interest-icon { font-size: 1.5rem; margin-bottom: 0.75rem; display: block; }
 
   .interest-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
-    font-weight: 400;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1rem;
+    font-weight: 700;
     color: var(--white);
-    line-height: 1.3;
+    line-height: 1.4;
   }
 
   /* ─── PUBLICATIONS ─── */
   #publications { background: var(--off-white); }
 
-  .pub-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .pub-list { display: flex; flex-direction: column; }
 
   .pub-item {
     display: grid;
     grid-template-columns: 3.5rem 1fr auto;
     gap: 1.5rem;
     align-items: start;
-    padding: 1.5rem 1.75rem;
-    background: var(--white);
-    border-radius: 16px;
-    border: 1px solid var(--border);
+    padding: 1.5rem 0;
+    background: transparent;
+    border-bottom: 1px solid var(--border);
     transition: all 0.2s;
     cursor: default;
   }
 
-  .pub-item:hover { border-color: var(--pink-light); box-shadow: 0 4px 20px rgba(240,66,122,0.08); transform: translateY(-2px); }
+  .pub-item:hover { padding-left: 0.5rem; border-color: var(--pink); }
 
   .pub-num {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 700;
     color: var(--pink);
-    background: var(--pink-pale);
+    border: 1px solid var(--pink-mid);
     padding: 0.3rem 0.5rem;
-    border-radius: 8px;
     text-align: center;
     align-self: start;
     margin-top: 0.1rem;
   }
 
   .pub-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 1.45;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.02rem;
+    font-weight: 700;
+    line-height: 1.5;
     margin-bottom: 0.4rem;
     color: var(--black);
   }
@@ -457,29 +438,25 @@
     line-height: 1.5;
   }
 
-  .pub-authors strong { color: var(--pink); font-weight: 600; }
+  .pub-authors strong { color: var(--pink); font-weight: 700; }
 
   .pub-venue {
     font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
     color: var(--black);
-    text-transform: uppercase;
-    background: #f0f0f0;
+    border: 1px solid var(--border);
     padding: 0.2rem 0.6rem;
-    border-radius: 999px;
     display: inline-block;
   }
 
   .pub-badge {
-    font-size: 0.58rem;
+    font-size: 0.6rem;
     font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+    letter-spacing: 0.04em;
     background: var(--pink);
     color: white;
     padding: 0.3rem 0.75rem;
-    border-radius: 999px;
     white-space: nowrap;
     align-self: start;
   }
@@ -490,37 +467,37 @@
   .edu-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 0;
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
   }
 
   .edu-item {
     padding: 2.5rem;
     background: var(--white);
-    border-radius: 24px;
-    border: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     transition: all 0.25s;
   }
 
-  .edu-item:hover { border-color: var(--pink); box-shadow: 0 8px 30px rgba(240,66,122,0.1); transform: translateY(-3px); }
+  .edu-item:hover { background: var(--pink-pale); }
 
   .edu-year {
-    font-size: 0.65rem;
+    font-size: 0.68rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--white);
-    background: var(--pink);
+    letter-spacing: 0.06em;
+    color: var(--pink);
+    border: 1px solid var(--pink);
     padding: 0.3rem 0.8rem;
-    border-radius: 999px;
     display: inline-block;
     margin-bottom: 1.25rem;
   }
 
   .edu-degree {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.3;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
     margin-bottom: 0.5rem;
     color: var(--black);
   }
@@ -533,55 +510,52 @@
   }
 
   .edu-note {
-    font-size: 0.7rem;
-    font-weight: 600;
+    font-size: 0.72rem;
+    font-weight: 700;
     color: var(--pink);
-    background: var(--pink-pale);
-    padding: 0.4rem 0.8rem;
-    border-radius: 999px;
+    border-bottom: 1px solid var(--pink);
+    padding: 0 0 2px;
     display: inline-block;
   }
 
   /* ─── AWARDS ─── */
   .awards-section { background: var(--black); }
   .awards-section .section-title { color: var(--white); }
-  .awards-section .section-num { background: var(--pink); }
-  .awards-section .section-line { background: rgba(255,255,255,0.1); }
+  .awards-section .section-num { border-color: var(--pink); color: var(--pink); }
+  .awards-section .section-line { background: rgba(255,255,255,0.15); }
 
-  .award-list { display: flex; flex-direction: column; gap: 1rem; }
+  .award-list { display: flex; flex-direction: column; }
 
   .award-item {
     display: grid;
     grid-template-columns: 5rem 1fr;
     gap: 1.5rem;
     align-items: start;
-    padding: 1.5rem 2rem;
-    background: var(--black-card);
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.06);
+    padding: 1.5rem 0;
+    background: transparent;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
     transition: all 0.2s;
   }
 
-  .award-item:hover { border-color: var(--pink); box-shadow: 0 6px 24px rgba(240,66,122,0.2); }
+  .award-item:hover { padding-left: 0.5rem; border-color: var(--pink); }
 
   .award-year {
-    font-size: 0.65rem;
+    font-size: 0.68rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
-    color: var(--white);
-    background: var(--pink);
+    letter-spacing: 0.05em;
+    color: var(--pink);
+    border: 1px solid var(--pink);
     padding: 0.3rem 0.6rem;
-    border-radius: 8px;
     text-align: center;
     align-self: start;
     margin-top: 0.1rem;
   }
 
   .award-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 1.4;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.02rem;
+    font-weight: 700;
+    line-height: 1.5;
     margin-bottom: 0.35rem;
     color: var(--white);
   }
@@ -597,9 +571,8 @@
 
   .agenda-placeholder {
     padding: 3rem;
-    background: var(--white);
+    background: transparent;
     border: 1px dashed var(--pink-mid);
-    border-radius: 20px;
     text-align: center;
   }
 
@@ -618,10 +591,10 @@
   }
 
   .agenda-intro p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
-    font-style: italic;
-    line-height: 1.7;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.15rem;
+    font-style: normal;
+    line-height: 1.8;
     color: #333;
   }
 
@@ -629,6 +602,36 @@
     text-align: center;
     margin-top: 2rem;
   }
+
+  /* ─── WORK WITH ME ─── */
+  .work-section { background: var(--white); }
+
+  .work-box {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem;
+    border: 1px solid var(--pink);
+  }
+
+  .work-box p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: #444;
+    margin-bottom: 2rem;
+  }
+
+  .work-email {
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--pink);
+    text-decoration: none;
+    border-bottom: 2px solid var(--pink);
+    padding-bottom: 3px;
+  }
+
+  .work-email:hover { color: var(--black); border-color: var(--black); }
 
   /* ─── FOOTER ─── */
   footer {
@@ -641,19 +644,9 @@
 
   .footer-text {
     font-size: 0.62rem;
-    letter-spacing: 0.1em;
-    color: rgba(255,255,255,0.25);
-    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.3);
   }
-
-  /* ─── ANIMATIONS ─── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero-left { animation: fadeUp 0.7s 0.1s both; }
-  .hero-right { animation: fadeUp 0.7s 0.25s both; }
 
   /* ─── RESPONSIVE ─── */
   @media (max-width: 900px) {
@@ -683,6 +676,7 @@
     <li><a href="#publications">Publications</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#awards">Awards</a></li>
+    <li><a href="#work-with-me">Work With Me</a></li>
     <li><a href="#updates">Updates</a></li>
   </ul>
 </nav>
@@ -710,7 +704,7 @@
   <!-- RIGHT: About me bio -->
   <div class="hero-right">
     <div class="hero-tag">About Me</div>
-    <h2 class="hero-greeting">Hello! I'm <em>Ankolika</em>,<br>a transdisciplinary researcher.</h2>
+    <h2 class="hero-greeting">Hello! I'm <em>Ankolika</em>, a transdisciplinary researcher.</h2>
 
     <p class="hero-bio">I am a <strong>Postdoctoral Fellow at Vanderbilt University's College of Connected Computing</strong>, in the Computing + Society program. I study how people engage with and adapt to platform technologies, including but not limited to AI systems and social media. I also analyze how technological change is framed in corporate and public discourse.</p>
 
@@ -827,7 +821,7 @@
   </div>
 
   <div style="text-align:center; margin-top: 3.5rem;">
-    <a href="https://scholar.google.com/citations?user=ankolikade" target="_blank" class="btn-primary" style="display:inline-block; font-size:0.72rem; letter-spacing:0.13em;">View All 17 Publications on Google Scholar →</a>
+    <a href="https://scholar.google.com/citations?user=ankolikade" target="_blank" class="btn-primary" style="display:inline-block; font-size:0.75rem; letter-spacing:0.06em;">View All 17 Publications on Google Scholar →</a>
   </div>
 </section>
 
@@ -924,10 +918,24 @@
   </div>
 </section>
 
+<!-- WORK WITH ME -->
+<section class="work-section" id="work-with-me">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <h2 class="section-title">Work With Me</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="work-box">
+    <p>I'm always glad to hear from students, collaborators, journalists, and organizations interested in platform accountability, AI governance, and user-centered research. If you'd like to collaborate on a project, invite me to speak, or just talk shop about sociotechnical systems, reach out.</p>
+    <a href="mailto:ankolika.de@vanderbilt.edu" class="work-email">ankolika.de@vanderbilt.edu</a>
+  </div>
+</section>
+
 <!-- UPDATES -->
 <section class="research-agenda-section" id="updates">
   <div class="section-header">
-    <div class="section-num">05</div>
+    <div class="section-num">06</div>
     <h2 class="section-title">Updates</h2>
     <div class="section-line"></div>
   </div>
