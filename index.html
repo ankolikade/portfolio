@@ -264,6 +264,41 @@
   }
   .footer-text { font-size: 0.9rem; color: var(--on-dark); }
 
+
+  /* ─── TEACHING ─── */
+  .teach-top { display: grid; grid-template-columns: 380px 1fr; gap: 4rem; max-width: 1150px; align-items: start; margin-bottom: 4rem; }
+  .poster-link { display: block; border: 2px solid var(--ink); }
+  .poster-link img { width: 100%; height: auto; display: block; }
+  .poster-cap { font-size: 0.85rem; margin-top: 0.6rem; }
+  .course-code { font-size: 1rem; font-weight: 700; color: var(--pink); margin-bottom: 0.75rem; }
+  .course-title { font-size: clamp(1.6rem, 2.4vw, 2.2rem); font-weight: 700; line-height: 1.3; margin-bottom: 1.25rem; }
+  .teach-text { font-size: 1.1rem; line-height: 1.85; margin-bottom: 1.25rem; max-width: 720px; }
+  .course-meta { list-style: none; margin: 1.5rem 0; border-top: 2px solid var(--ink); max-width: 720px; }
+  .course-meta li { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid var(--rule); font-size: 1rem; line-height: 1.6; }
+  .course-meta strong { color: var(--pink); }
+  .sub-head { font-size: 1.3rem; font-weight: 700; margin: 3rem 0 1.25rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--pink); max-width: 1150px; }
+  .should-list, .outcome-list { list-style: none; max-width: 900px; }
+  .should-list li, .outcome-list li { position: relative; padding-left: 1.6rem; margin-bottom: 0.9rem; font-size: 1.1rem; line-height: 1.75; }
+  .should-list li::before, .outcome-list li::before { content: "→"; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+  .unit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1150px; }
+  .unit-card { background: var(--paper); border: 2px solid var(--ink); padding: 1.5rem; }
+  .unit-weeks { font-size: 0.95rem; font-weight: 700; color: var(--pink); margin-bottom: 0.4rem; }
+  .unit-name { font-size: 1.2rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.75rem; }
+  .unit-card p { font-size: 1rem; line-height: 1.7; }
+  .assess-list { list-style: none; max-width: 900px; }
+  .assess-list li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid var(--rule); font-size: 1.05rem; line-height: 1.7; }
+  .assess-pct { font-weight: 700; color: var(--pink); }
+  .assess-list strong { font-weight: 700; }
+
+  /* ─── PUBLIC SCHOLARSHIP ─── */
+  .ps-intro { font-size: 1.25rem; line-height: 1.9; max-width: 800px; margin-bottom: 3rem; }
+  .ps-list { display: flex; flex-direction: column; gap: 2rem; max-width: 900px; }
+  .ps-item { display: block; border-left: 4px solid var(--pink); padding: 0.25rem 0 0.25rem 1.5rem; text-decoration: none; color: var(--ink); }
+  .ps-item:hover .ps-title { color: var(--pink); }
+  .ps-outlet { font-size: 0.95rem; font-weight: 700; color: var(--pink); margin-bottom: 0.3rem; }
+  .ps-title { font-size: 1.25rem; font-weight: 700; line-height: 1.5; margin-bottom: 0.4rem; transition: color 0.2s; }
+  .ps-read { font-size: 1rem; }
+
   /* ─── RESPONSIVE ─── */
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
@@ -276,6 +311,9 @@
     .edu-grid { grid-template-columns: 1fr; gap: 3rem; }
     .pub-item, .award-item { grid-template-columns: 1fr; gap: 0.25rem; }
     .section-header { flex-wrap: wrap; }
+    .unit-grid { grid-template-columns: 1fr; }
+    .teach-top { grid-template-columns: 1fr; gap: 2rem; }
+    .course-meta li { grid-template-columns: 1fr; gap: 0; }
   }
 </style>
 </head>
@@ -288,6 +326,8 @@
     <li><a href="#home">Home</a></li>
     <li><a href="#research-agenda">Research Agenda</a></li>
     <li><a href="#publications">Publications</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#public-scholarship">Public Scholarship</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#awards">Awards</a></li>
     <li><a href="#work-with-me">Work With Me</a></li>
@@ -436,10 +476,126 @@
   </div>
 </section>
 
+<!-- TEACHING -->
+<section id="teaching" style="background: var(--soft)">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <h2 class="section-title">Teaching</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="teach-top">
+    <div>
+      <a class="poster-link" href="CCC_2245_Course_Poster.png" target="_blank">
+        <img src="CCC_2245_Course_Poster.png" alt="Course poster for CCC 2245: Computing for Communities, taught by Dr. Ankolika De, Spring 2027, MWF 9:05–9:55am" />
+      </a>
+      <div class="poster-cap">CCC 2245 course poster (click to enlarge)</div>
+    </div>
+
+    <div>
+      <div class="course-code">CCC 2245</div>
+      <h3 class="course-title">Computing for Communities</h3>
+      <p class="teach-text">I am teaching my own course at Vanderbilt University, <strong>CCC 2245: Computing for Communities</strong>, offered through the College of Connected Computing. The guiding question is: how can AI be designed <em>with</em> society, rather than simply <em>for</em> it?</p>
+      <p class="teach-text">The course combines theory, case studies, methods training, and hands-on projects to look at how communities and stakeholders can shape the goals, design, development, and evaluation of AI systems. In the final project, student teams speculate an AI system grounded in the needs and values of a particular community.</p>
+
+      <ul class="course-meta">
+        <li><strong>Instructor</strong><span>Dr. Ankolika De</span></li>
+        <li><strong>Term</strong><span>Spring 2027 · MWF 9:05–9:55am</span></li>
+        <li><strong>Level</strong><span>Undergraduate, 2000-level · 3 credit hours</span></li>
+        <li><strong>Counts toward</strong><span>Minor in Computing and Society (College of Connected Computing); earn credits in CCC and A&amp;S</span></li>
+        <li><strong>Prerequisites</strong><span>None. No programming experience required.</span></li>
+        <li><strong>Questions?</strong><span><a href="mailto:computingsociety@vanderbilt.edu" class="work-email" style="font-size:1rem">computingsociety@vanderbilt.edu</a></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-head">Who Should Take This Course</h3>
+  <ul class="should-list">
+    <li>You want to learn about designing and governing <strong>community-centered AI</strong>.</li>
+    <li>You want to learn to work with communities through <strong>interviews, participatory design, and speculative futures</strong>.</li>
+    <li>You are curious about <strong>who tech works for, who it leaves out, and why</strong>.</li>
+    <li>You come from any background. Students from different majors with an interest in community-centered technologies are welcome, and no coding is needed.</li>
+  </ul>
+
+  <h3 class="sub-head">What You Will Be Able to Do</h3>
+  <ul class="outcome-list">
+    <li>Explain AI as a sociotechnical system that encompasses technology, people, institutions, data, and power.</li>
+    <li>Identify whose needs are included or excluded in existing AI systems.</li>
+    <li>Apply participatory methods to reimagine community-centered AI systems.</li>
+    <li>Design an alternative AI system through a prototype, research, policy, governance, or another form.</li>
+    <li>Communicate ideas clearly to academic, community, and public audiences.</li>
+  </ul>
+
+  <h3 class="sub-head">Course Structure</h3>
+  <div class="unit-grid">
+    <div class="unit-card">
+      <div class="unit-weeks">Unit 1 · Weeks 1–4</div>
+      <div class="unit-name">Foundations</div>
+      <p>What AI is, how power shapes it, who is harmed or left out, and what "community" and "participation" mean. Topics include AI as a sociotechnical system, stakeholders across the AI life cycle, and the difference between meaningful participation and tokenism.</p>
+    </div>
+    <div class="unit-card">
+      <div class="unit-weeks">Unit 2 · Weeks 5–9</div>
+      <div class="unit-name">Methods</div>
+      <p>Hands-on training in interviews and focus groups, participatory design, relationships and power in co-design, speculative design (futures wheels, mock headlines, product ads), and participatory data and evaluation.</p>
+    </div>
+    <div class="unit-card">
+      <div class="unit-weeks">Unit 3 · Weeks 10–14</div>
+      <div class="unit-name">Governance, Alternatives, and Studio</div>
+      <p>Community data governance and data charters, AI and labor, the option of not building AI at all, then studio time for prototyping, peer feedback, and final presentations.</p>
+    </div>
+  </div>
+  <p class="teach-text" style="margin-top:2rem;">Most meetings combine a short moderated discussion, a hands-on activity, and a reflection, with roughly half of class time spent on active work. Reading loads are moderate (about 40–60 pages a week), often pairing a scholarly piece with a news article, case, or podcast. There is no textbook to buy, since all readings are posted on Brightspace or available through the Vanderbilt Libraries.</p>
+
+  <h3 class="sub-head">Assignments and Grading</h3>
+  <ul class="assess-list">
+    <li><span class="assess-pct">10%</span><span><strong>Participation and in-class workshops.</strong> Active, respectful engagement in discussions, activities, and peer feedback.</span></li>
+    <li><span class="assess-pct">15%</span><span><strong>Reading reflections.</strong> Short reflections before class in Weeks 2–13; your best 10 of 12 count. Graded on depth of thinking, not writing polish.</span></li>
+    <li><span class="assess-pct">20%</span><span><strong>Methods labs.</strong> Three labs: an interview practice (guide, practice interview, reflection), a participatory design workshop (planning and facilitating a 20-minute activity with classmates), and a speculative design artifact (a mock headline, ad, manual, or short scene showing a possible AI future).</span></li>
+    <li><span class="assess-pct">20%</span><span><strong>Midterm case study: "Whose AI Is This?"</strong> A 4–5 page analysis of an existing AI system, such as a hiring tool, school-monitoring system, health chatbot, or predictive policing tool. It asks who it was designed for, who is affected but left out, where community involvement could have changed outcomes, and what a realistic proposal for more meaningful involvement would look like.</span></li>
+    <li><span class="assess-pct">35%</span><span><strong>Final project: Reimagining an AI System.</strong> In teams of 3–4, you reimagine an AI system (or decide it should not be built) grounded in a particular community, such as first-generation students, nurses at a local hospital, rideshare drivers, or teachers at a school. It is built in stages: proposal, community engagement plan, final presentation, and a written rationale with an individual reflection.</span></li>
+  </ul>
+
+  <h3 class="sub-head">Grading Philosophy</h3>
+  <ul class="outcome-list">
+    <li><strong>Clear rubrics</strong> come with every assignment, and we review them in class.</li>
+    <li><strong>Revise and resubmit:</strong> the midterm and any one methods lab can be revised for regrade within two weeks of feedback.</li>
+    <li><strong>Feedback:</strong> every final project milestone includes written instructor feedback and peer feedback.</li>
+    <li><strong>Mid-semester check-in:</strong> around Week 8, a short self-assessment against the learning outcomes, with an optional brief meeting.</li>
+  </ul>
+
+  <div style="margin-top: 3rem;">
+    <a href="mailto:computingsociety@vanderbilt.edu" class="btn-primary">Questions? Get in touch →</a>
+  </div>
+</section>
+
+<!-- PUBLIC SCHOLARSHIP -->
+<section id="public-scholarship">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <h2 class="section-title">Public Scholarship</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <p class="ps-intro">I am very interested in public scholarship. I enjoy writing it, and as an academic I also think it is a large responsibility: all science should be accessible to the people it affects and the people who help make it possible.</p>
+
+  <div class="ps-list">
+    <a class="ps-item" href="https://theconversation.com/ai-agents-with-friendly-faces-and-adorable-bodies-can-distract-you-from-serious-risks-294339" target="_blank" rel="noopener">
+      <div class="ps-outlet">The Conversation</div>
+      <div class="ps-title">AI agents with friendly faces and adorable bodies can distract you from serious risks</div>
+      <div class="ps-read">Read the article →</div>
+    </a>
+    <a class="ps-item" href="https://theconversation.com/ai-interviewers-cant-connect-with-people-the-way-human-researchers-can-they-can-produce-only-data-not-meaning-279437" target="_blank" rel="noopener">
+      <div class="ps-outlet">The Conversation</div>
+      <div class="ps-title">AI interviewers can't connect with people the way human researchers can; they can produce only data, not meaning</div>
+      <div class="ps-read">Read the article →</div>
+    </a>
+  </div>
+</section>
+
 <!-- EDUCATION -->
 <section id="education" style="background: var(--soft)">
   <div class="section-header">
-    <div class="section-num">03</div>
+    <div class="section-num">05</div>
     <h2 class="section-title">Education</h2>
     <div class="section-line"></div>
   </div>
@@ -464,7 +620,7 @@
 <!-- AWARDS -->
 <section class="awards-section" id="awards">
   <div class="section-header">
-    <div class="section-num">04</div>
+    <div class="section-num">06</div>
     <h2 class="section-title">Honors & Awards</h2>
     <div class="section-line"></div>
   </div>
@@ -532,7 +688,7 @@
 <!-- WORK WITH ME -->
 <section class="work-section" id="work-with-me">
   <div class="section-header">
-    <div class="section-num">05</div>
+    <div class="section-num">07</div>
     <h2 class="section-title">Work With Me</h2>
     <div class="section-line"></div>
   </div>
@@ -546,7 +702,7 @@
 <!-- UPDATES -->
 <section class="research-agenda-section" id="updates">
   <div class="section-header">
-    <div class="section-num">06</div>
+    <div class="section-num">08</div>
     <h2 class="section-title">Updates</h2>
     <div class="section-line"></div>
   </div>
